@@ -1,0 +1,5152 @@
+{
+ "source": {
+  "name": "Мапа відключень «Підгрупи 6.2»",
+  "url": "https://eh-map.napruha.top/",
+  "telegram": "https://t.me/subgroups62",
+  "retrievedAt": "2026-10-10T08:20:27.466Z",
+  "note": "Знімок прив’язки адрес до підгруп. Використовується з атрибуцією; оновлюється вручну."
+ },
+ "colors": {
+  "sg10": "#00f2f2",
+  "sg20": "#1a80e6",
+  "sg30": "#f266ff",
+  "sg40": "#ff4d6a",
+  "sg50": "#fbfb51",
+  "sg60": "#ffaa00",
+  "sg70": "#99ccff",
+  "sg80": "#29a329",
+  "sg90": "#8c9df2",
+  "id_50": "#a65eed",
+  "id_73": "#fbfb51",
+  "id_127": "#dfd1fa",
+  "id_131": "#67a6e4",
+  "id_17": "#80ffbf",
+  "id_20": "#f5d63d",
+  "id_24": "#ff6a00",
+  "id_26": "#3dd6f5",
+  "id_71": "#70a7c2",
+  "id_69": "#c2707e",
+  "id_13": "#99f53d",
+  "id_33": "#ffb3e6",
+  "id_27": "#c2c270",
+  "id_415": "#c37322"
+ },
+ "polygons": [
+  {
+   "id": "novobilychi_priv",
+   "group": "sg80",
+   "coordinates": [
+    [
+     50.473924,
+     30.3576083
+    ],
+    [
+     50.4764785,
+     30.3586461
+    ],
+    [
+     50.4773836,
+     30.3566711
+    ],
+    [
+     50.4771911,
+     30.3533107
+    ],
+    [
+     50.4741931,
+     30.3537736
+    ],
+    [
+     50.473924,
+     30.3576083
+    ]
+   ]
+  },
+  {
+   "id": "sg10_priv",
+   "group": "sg10",
+   "coordinates": [
+    [
+     50.4741931,
+     30.3537736
+    ],
+    [
+     50.4771911,
+     30.3533107
+    ],
+    [
+     50.4773836,
+     30.3566711
+    ],
+    [
+     50.4803872,
+     30.3502454
+    ],
+    [
+     50.4802963,
+     30.3490313
+    ],
+    [
+     50.4744636,
+     30.3498719
+    ],
+    [
+     50.4741931,
+     30.3537736
+    ]
+   ]
+  },
+  {
+   "id": "sg30_priv",
+   "group": "id_33",
+   "coordinates": [
+    [
+     50.4744636,
+     30.3498719
+    ],
+    [
+     50.4769251,
+     30.3495171
+    ],
+    [
+     50.4764856,
+     30.3434554
+    ],
+    [
+     50.4778946,
+     30.3432109
+    ],
+    [
+     50.4778462,
+     30.3425813
+    ],
+    [
+     50.4743539,
+     30.3431752
+    ],
+    [
+     50.4746457,
+     30.3473285
+    ],
+    [
+     50.4744636,
+     30.3498719
+    ]
+   ]
+  },
+  {
+   "id": "sg40_priv",
+   "group": "id_33",
+   "coordinates": [
+    [
+     50.4743539,
+     30.3431752
+    ],
+    [
+     50.4778462,
+     30.3425813
+    ],
+    [
+     50.4776887,
+     30.3405666
+    ],
+    [
+     50.4742069,
+     30.3411697
+    ],
+    [
+     50.4743539,
+     30.3431752
+    ]
+   ]
+  }
+ ],
+ "addresses": [
+  {
+   "id": "bahmatska_10",
+   "title": "Бахмацька, 10",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_33"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.477289,
+   "lon": 30.343553
+  },
+  {
+   "id": "pump_bahmatska",
+   "title": "Бахмацька, 10?",
+   "entrance": null,
+   "description": "Бювет",
+   "groups": [],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.477003,
+   "lon": 30.344164
+  },
+  {
+   "id": "bahmatska_18",
+   "title": "Бахмацька, 18",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg10"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.478624,
+   "lon": 30.343397
+  },
+  {
+   "id": "bahmatska_20",
+   "title": "Бахмацька, 20",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg10"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.479276,
+   "lon": 30.343204
+  },
+  {
+   "id": "bahmatska_35",
+   "title": "Бахмацька, 35",
+   "entrance": null,
+   "description": "Дитсадок №536",
+   "groups": [
+    "sg20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.478825,
+   "lon": 30.342249
+  },
+  {
+   "id": "bakhchysaraiska_1a",
+   "title": "Бахчисарайська, 1А",
+   "entrance": null,
+   "description": "Дитсадок №786",
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45816,
+   "lon": 30.3482
+  },
+  {
+   "id": "beresteiskyi_121a",
+   "title": "Берестейський, 121А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_121"
+   ],
+   "dtekGroups": [
+    "6.1"
+   ],
+   "lat": 50.45442,
+   "lon": 30.36072
+  },
+  {
+   "id": "beresteiskyi_121b",
+   "title": "Берестейський, 121Б",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_121"
+   ],
+   "dtekGroups": [
+    "6.1"
+   ],
+   "lat": 50.45479,
+   "lon": 30.36184
+  },
+  {
+   "id": "beresteiskyi_125",
+   "title": "Берестейський, 125",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_127"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45433,
+   "lon": 30.35362
+  },
+  {
+   "id": "beresteiskyi_127",
+   "title": "Берестейський, 127",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_127"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45427,
+   "lon": 30.35291
+  },
+  {
+   "id": "beresteiskyi_131",
+   "title": "Берестейський, 131",
+   "entrance": null,
+   "description": "ЖК Аквамарин",
+   "groups": [
+    "id_127"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45449,
+   "lon": 30.35169
+  },
+  {
+   "id": "beresteiskyi_131a",
+   "title": "Берестейський, 131А",
+   "entrance": null,
+   "description": "ЖК Аквамарин",
+   "groups": [
+    "id_127"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45446,
+   "lon": 30.35093
+  },
+  {
+   "id": "beresteiskyi_134_1",
+   "title": "Берестейський, 134/1",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_24"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45656,
+   "lon": 30.36347
+  },
+  {
+   "id": "beresteiskyi_144",
+   "title": "Берестейський, 144",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45578,
+   "lon": 30.34817
+  },
+  {
+   "id": "beresteiskyi_144a",
+   "title": "Берестейський, 144А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45651,
+   "lon": 30.34845
+  },
+  {
+   "id": "beresteiskyi_146_2",
+   "title": "Берестейський, 146/2",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45609,
+   "lon": 30.34751
+  },
+  {
+   "id": "beresteiskyi_148_1",
+   "title": "Берестейський, 148/1",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.4552,
+   "lon": 30.34431
+  },
+  {
+   "id": "bilychanska_1",
+   "title": "Біличанська, 1",
+   "entrance": null,
+   "description": null,
+   "groups": [],
+   "dtekGroups": [
+    "18.1"
+   ],
+   "lat": 50.45907,
+   "lon": 30.37152
+  },
+  {
+   "id": "bilychanska_3",
+   "title": "Біличанська, 3",
+   "entrance": null,
+   "description": null,
+   "groups": [],
+   "dtekGroups": [
+    "18.1"
+   ],
+   "lat": 50.45929,
+   "lon": 30.37058
+  },
+  {
+   "id": "bilychanska_5",
+   "title": "Біличанська, 5",
+   "entrance": null,
+   "description": null,
+   "groups": [],
+   "dtekGroups": [
+    "18.1"
+   ],
+   "lat": 50.45954,
+   "lon": 30.36967
+  },
+  {
+   "id": "bulah_2",
+   "title": "Булаховського, 2",
+   "entrance": null,
+   "description": "Інститут технічної теплофізики",
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.47139,
+   "lon": 30.35497
+  },
+  {
+   "id": "bulah_3a",
+   "title": "Булаховського, 3А",
+   "entrance": null,
+   "description": "ТЦ Регіна (Фора)",
+   "groups": [
+    "sg20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46907,
+   "lon": 30.336235
+  },
+  {
+   "id": "bulah_5a",
+   "title": "Булаховського, 5А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg10"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.469964,
+   "lon": 30.340064
+  },
+  {
+   "id": "bulah_5b",
+   "title": "Булаховського, 5Б",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg10"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.469919,
+   "lon": 30.338385
+  },
+  {
+   "id": "bulah_5v",
+   "title": "Булаховського, 5В",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.469196,
+   "lon": 30.338251
+  },
+  {
+   "id": "bulah_5g",
+   "title": "Булаховського, 5Г",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg10",
+    "sg20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46898,
+   "lon": 30.33765
+  },
+  {
+   "id": "bulah_5d",
+   "title": "Булаховського, 5Д",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg10"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.469506,
+   "lon": 30.336926
+  },
+  {
+   "id": "bulah_22",
+   "title": "Булаховського, 22",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg10"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.471405,
+   "lon": 30.338029
+  },
+  {
+   "id": "bulah_24",
+   "title": "Булаховського, 24",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg10"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.471548,
+   "lon": 30.337186
+  },
+  {
+   "id": "bulah_26",
+   "title": "Булаховського, 26",
+   "entrance": null,
+   "description": "Поліклініка №4",
+   "groups": [],
+   "dtekGroups": [
+    "7.1"
+   ],
+   "lat": 50.470848,
+   "lon": 30.336918
+  },
+  {
+   "id": "bulah_28",
+   "title": "Булаховського, 28",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg10"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.471084,
+   "lon": 30.336344
+  },
+  {
+   "id": "bulah_28a",
+   "title": "Булаховського, 28А",
+   "entrance": null,
+   "description": "Дитсадок №567",
+   "groups": [],
+   "dtekGroups": [
+    "7.1"
+   ],
+   "lat": 50.471632,
+   "lon": 30.335556
+  },
+  {
+   "id": "bulah_28b",
+   "title": "Булаховського, 28Б",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.471255,
+   "lon": 30.334349
+  },
+  {
+   "id": "bulah_28v",
+   "title": "Булаховського, 28В",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.471478,
+   "lon": 30.333477
+  },
+  {
+   "id": "bulah_28g",
+   "title": "Булаховського, 28Г",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.470852,
+   "lon": 30.334392
+  },
+  {
+   "id": "bulah_30",
+   "title": "Булаховського, 30",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg10"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.470544,
+   "lon": 30.336006
+  },
+  {
+   "id": "bulah_30a",
+   "title": "Булаховського, 30А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.470508,
+   "lon": 30.334365
+  },
+  {
+   "id": "bulah_30b",
+   "title": "Булаховського, 30Б",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.47074,
+   "lon": 30.33301
+  },
+  {
+   "id": "bulah_32",
+   "title": "Булаховського, 32",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg10"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.469759,
+   "lon": 30.335606
+  },
+  {
+   "id": "bulah_32a",
+   "title": "Булаховського, 32А",
+   "entrance": null,
+   "description": "Дитсадок №587",
+   "groups": [],
+   "dtekGroups": [
+    "7.1"
+   ],
+   "lat": 50.470085,
+   "lon": 30.334242
+  },
+  {
+   "id": "bulah_34",
+   "title": "Булаховського, 34",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg30"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.469006,
+   "lon": 30.334504
+  },
+  {
+   "id": "bulah_34a",
+   "title": "Булаховського, 34А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg30"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46925,
+   "lon": 30.332986
+  },
+  {
+   "id": "bulah_36",
+   "title": "Булаховського, 36",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg30"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.468266,
+   "lon": 30.333884
+  },
+  {
+   "id": "bulah_38",
+   "title": "Булаховського, 38",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg30"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.467918,
+   "lon": 30.333389
+  },
+  {
+   "id": "bulah_38a",
+   "title": "Булаховського, 38А",
+   "entrance": null,
+   "description": "Дитсадок №615",
+   "groups": [],
+   "dtekGroups": [
+    "11.1"
+   ],
+   "lat": 50.4682,
+   "lon": 30.331774
+  },
+  {
+   "id": "bulah_40",
+   "title": "Булаховського, 40",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg70"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.467596,
+   "lon": 30.332485
+  },
+  {
+   "id": "bulah_42_43",
+   "title": "Булаховського, 42/43",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg30"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.467278,
+   "lon": 30.331812
+  },
+  {
+   "id": "buchanska_4",
+   "title": "Бучанська, 4",
+   "entrance": null,
+   "description": "Coliving Akadem",
+   "groups": [
+    "id_27"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46765,
+   "lon": 30.34665
+  },
+  {
+   "id": "vaskula_2",
+   "title": "Васкула, 2",
+   "entrance": null,
+   "description": null,
+   "groups": [],
+   "dtekGroups": [
+    "18.1"
+   ],
+   "lat": 50.45841,
+   "lon": 30.3707
+  },
+  {
+   "id": "vaskula_4",
+   "title": "Васкула, 4",
+   "entrance": null,
+   "description": null,
+   "groups": [],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45891,
+   "lon": 30.36835
+  },
+  {
+   "id": "vaskula_5",
+   "title": "Васкула, 5",
+   "entrance": null,
+   "description": null,
+   "groups": [],
+   "dtekGroups": [],
+   "lat": 50.45771,
+   "lon": 30.3699
+  },
+  {
+   "id": "vaskula_6",
+   "title": "Васкула, 6",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_73"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.4584,
+   "lon": 30.36677
+  },
+  {
+   "id": "vaskula_8",
+   "title": "Васкула, 8",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_73"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45831,
+   "lon": 30.36465
+  },
+  {
+   "id": "vaskula_8a",
+   "title": "Васкула, 8А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_73"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45911,
+   "lon": 30.36546
+  },
+  {
+   "id": "vaskula_13",
+   "title": "Васкула, 13",
+   "entrance": null,
+   "description": null,
+   "groups": [],
+   "dtekGroups": [],
+   "lat": 50.45741,
+   "lon": 30.36692
+  },
+  {
+   "id": "vaskula_19",
+   "title": "Васкула, 19",
+   "entrance": null,
+   "description": null,
+   "groups": [],
+   "dtekGroups": [
+    "18.1",
+    "12.1"
+   ],
+   "lat": 50.45754,
+   "lon": 30.36487
+  },
+  {
+   "id": "vaskula_21",
+   "title": "Васкула, 21",
+   "entrance": null,
+   "description": null,
+   "groups": [],
+   "dtekGroups": [],
+   "lat": 50.45752,
+   "lon": 30.36541
+  },
+  {
+   "id": "vaskula_44_50",
+   "title": "Васкула, 44/50",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45761,
+   "lon": 30.35431
+  },
+  {
+   "id": "vaskula_49",
+   "title": "Васкула, 49",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45611,
+   "lon": 30.35152
+  },
+  {
+   "id": "vaskula_50a",
+   "title": "Васкула, 50А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45829,
+   "lon": 30.35479
+  },
+  {
+   "id": "vaskula_52",
+   "title": "Васкула, 52",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45746,
+   "lon": 30.3532
+  },
+  {
+   "id": "vaskula_54",
+   "title": "Васкула, 54",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.4573,
+   "lon": 30.35195
+  },
+  {
+   "id": "vernadskoho_24",
+   "title": "Вернадського, 24",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_24"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.4627,
+   "lon": 30.37456
+  },
+  {
+   "id": "vernadskoho_32",
+   "title": "Вернадського, 32",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.4656,
+   "lon": 30.36913
+  },
+  {
+   "id": "vernadskoho_34_1",
+   "title": "Вернадського, 34/1",
+   "entrance": null,
+   "description": "Фізико-технологічний інститут металів та сплавів",
+   "groups": [
+    "id_20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46608,
+   "lon": 30.36667
+  },
+  {
+   "id": "vernadskoho_57",
+   "title": "Вернадського, 57",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_24"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46319,
+   "lon": 30.371
+  },
+  {
+   "id": "vernadskoho_59",
+   "title": "Вернадського, 59",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_71"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46372,
+   "lon": 30.37
+  },
+  {
+   "id": "vernadskoho_61",
+   "title": "Вернадського, 61",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_71"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46394,
+   "lon": 30.36901
+  },
+  {
+   "id": "vernadskoho_63",
+   "title": "Вернадського, 63",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_71"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46419,
+   "lon": 30.36852
+  },
+  {
+   "id": "vernadskoho_65",
+   "title": "Вернадського, 65",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_69"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46445,
+   "lon": 30.36796
+  },
+  {
+   "id": "vernadskoho_67",
+   "title": "Вернадського, 67",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_69"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46467,
+   "lon": 30.36747
+  },
+  {
+   "id": "vernadskoho_69",
+   "title": "Вернадського, 69",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_69"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46523,
+   "lon": 30.36678
+  },
+  {
+   "id": "vernadskoho_69a",
+   "title": "Вернадського, 69А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_69"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46525,
+   "lon": 30.36631
+  },
+  {
+   "id": "vernadskoho_71",
+   "title": "Вернадського, 71",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_71"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46455,
+   "lon": 30.36588
+  },
+  {
+   "id": "vernadskoho_71a",
+   "title": "Вернадського, 71А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_71"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46521,
+   "lon": 30.36543
+  },
+  {
+   "id": "vernadskoho_73",
+   "title": "Вернадського, 73",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_71"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46451,
+   "lon": 30.365
+  },
+  {
+   "id": "vernadskoho_73a",
+   "title": "Вернадського, 73А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_71"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46514,
+   "lon": 30.3646
+  },
+  {
+   "id": "vernadskoho_75",
+   "title": "Вернадського, 75",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_71"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46446,
+   "lon": 30.36412
+  },
+  {
+   "id": "vernadskoho_75a",
+   "title": "Вернадського, 75А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_71"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46507,
+   "lon": 30.36373
+  },
+  {
+   "id": "vernadskoho_79",
+   "title": "Вернадського, 79",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46491,
+   "lon": 30.36216
+  },
+  {
+   "id": "vernadskoho_81",
+   "title": "Вернадського, 81",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46461,
+   "lon": 30.36027
+  },
+  {
+   "id": "vernadskoho_83",
+   "title": "Вернадського, 83",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46425,
+   "lon": 30.35989
+  },
+  {
+   "id": "vernadskoho_85",
+   "title": "Вернадського, 85",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46445,
+   "lon": 30.35837
+  },
+  {
+   "id": "pump_vernadskoho",
+   "title": "Вернадського, 85?",
+   "entrance": null,
+   "description": "Бювет",
+   "groups": [],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.464081,
+   "lon": 30.358448
+  },
+  {
+   "id": "vernadskoho_87",
+   "title": "Вернадського, 87",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.4646,
+   "lon": 30.35723
+  },
+  {
+   "id": "vernadskoho_87a",
+   "title": "Вернадського, 87А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46401,
+   "lon": 30.35714
+  },
+  {
+   "id": "verkhovynna_80",
+   "title": "Верховинна, 80",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_131"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45176,
+   "lon": 30.3538
+  },
+  {
+   "id": "verkhovynna_80b",
+   "title": "Верховинна, 80Б",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_131"
+   ],
+   "dtekGroups": [
+    "6.1"
+   ],
+   "lat": 50.45194,
+   "lon": 30.35262
+  },
+  {
+   "id": "verkhovynna_81",
+   "title": "Верховинна, 81",
+   "entrance": null,
+   "description": null,
+   "groups": [],
+   "dtekGroups": [
+    "6.1"
+   ],
+   "lat": 50.4514,
+   "lon": 30.35629
+  },
+  {
+   "id": "verkhovynna_84",
+   "title": "Верховинна, 84",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_131"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45151,
+   "lon": 30.351
+  },
+  {
+   "id": "verkhovynna_85",
+   "title": "Верховинна, 85",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_131"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45134,
+   "lon": 30.35487
+  },
+  {
+   "id": "dobrokhotova_1",
+   "title": "Доброхотова, 1",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_24"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46259,
+   "lon": 30.36996
+  },
+  {
+   "id": "dobrokhotova_1b",
+   "title": "Доброхотова, 1Б",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_24"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46205,
+   "lon": 30.36957
+  },
+  {
+   "id": "dobrokhotova_2",
+   "title": "Доброхотова, 2",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_71"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46314,
+   "lon": 30.36995
+  },
+  {
+   "id": "dobrokhotova_3",
+   "title": "Доброхотова, 3",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_24"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46235,
+   "lon": 30.36821
+  },
+  {
+   "id": "dobrokhotova_4",
+   "title": "Доброхотова, 4",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_71"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46293,
+   "lon": 30.36934
+  },
+  {
+   "id": "dobrokhotova_5",
+   "title": "Доброхотова, 5",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_24"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46229,
+   "lon": 30.36736
+  },
+  {
+   "id": "dobrokhotova_6",
+   "title": "Доброхотова, 6",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_71"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46317,
+   "lon": 30.36814
+  },
+  {
+   "id": "dobrokhotova_7",
+   "title": "Доброхотова, 7",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_69"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46225,
+   "lon": 30.3665
+  },
+  {
+   "id": "dobrokhotova_8",
+   "title": "Доброхотова, 8",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_71"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46314,
+   "lon": 30.36735
+  },
+  {
+   "id": "dobrokhotova_9",
+   "title": "Доброхотова, 9",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_69"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.4622,
+   "lon": 30.36562
+  },
+  {
+   "id": "dobrokhotova_10",
+   "title": "Доброхотова, 10",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_69"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46309,
+   "lon": 30.36659
+  },
+  {
+   "id": "dobrokhotova_11",
+   "title": "Доброхотова, 11",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_26"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46217,
+   "lon": 30.36457
+  },
+  {
+   "id": "dobrokhotova_11a",
+   "title": "Доброхотова, 11А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46174,
+   "lon": 30.36472
+  },
+  {
+   "id": "dobrokhotova_12",
+   "title": "Доброхотова, 12",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_71"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46305,
+   "lon": 30.3658
+  },
+  {
+   "id": "dobrokhotova_14",
+   "title": "Доброхотова, 14",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_71"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46299,
+   "lon": 30.36499
+  },
+  {
+   "id": "dobrokhotova_15*1",
+   "title": "Доброхотова, 15",
+   "entrance": "1-2",
+   "description": null,
+   "groups": [
+    "id_26"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46199,
+   "lon": 30.36021
+  },
+  {
+   "id": "dobrokhotova_15*3",
+   "title": "Доброхотова, 15",
+   "entrance": "3-4",
+   "description": null,
+   "groups": [
+    "id_17"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46166,
+   "lon": 30.36074
+  },
+  {
+   "id": "dobrokhotova_15*5",
+   "title": "Доброхотова, 15",
+   "entrance": "5-8",
+   "description": null,
+   "groups": [
+    "id_26"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46146,
+   "lon": 30.36019
+  },
+  {
+   "id": "dobrokhotova_16a",
+   "title": "Доброхотова, 16А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_24"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46272,
+   "lon": 30.36407
+  },
+  {
+   "id": "dobrokhotova_17",
+   "title": "Доброхотова, 17",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_17"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46164,
+   "lon": 30.35858
+  },
+  {
+   "id": "dobrokhotova_20_19",
+   "title": "Доброхотова, 20/19",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46251,
+   "lon": 30.36255
+  },
+  {
+   "id": "dobrokhotova_24",
+   "title": "Доброхотова, 24",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.4627,
+   "lon": 30.36039
+  },
+  {
+   "id": "dobrokhotova_26",
+   "title": "Доброхотова, 26",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46262,
+   "lon": 30.35948
+  },
+  {
+   "id": "dobrokhotova_28",
+   "title": "Доброхотова, 28",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46257,
+   "lon": 30.35868
+  },
+  {
+   "id": "dobrokhotova_30",
+   "title": "Доброхотова, 30",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46309,
+   "lon": 30.35852
+  },
+  {
+   "id": "yefremova_3",
+   "title": "Єфремова, 3",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg80"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46423,
+   "lon": 30.35254
+  },
+  {
+   "id": "yefremova_4",
+   "title": "Єфремова, 4",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46635,
+   "lon": 30.3519
+  },
+  {
+   "id": "yefremova_6",
+   "title": "Єфремова, 6",
+   "entrance": null,
+   "description": "Баул",
+   "groups": [],
+   "dtekGroups": [],
+   "lat": 50.46564,
+   "lon": 30.3541
+  },
+  {
+   "id": "yefremova_7",
+   "title": "Єфремова, 7",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_13"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46363,
+   "lon": 30.35202
+  },
+  {
+   "id": "yefremova_7a",
+   "title": "Єфремова, 7А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg80"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.4632,
+   "lon": 30.35096
+  },
+  {
+   "id": "yefremova_8a",
+   "title": "Єфремова, 8А",
+   "entrance": null,
+   "description": "ЖК Академмістечко",
+   "groups": [
+    "id_33",
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46509,
+   "lon": 30.35219
+  },
+  {
+   "id": "yefremova_9",
+   "title": "Єфремова, 9",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46407,
+   "lon": 30.35042
+  },
+  {
+   "id": "yefremova_9a",
+   "title": "Єфремова, 9А",
+   "entrance": null,
+   "description": "Дитсадок №200",
+   "groups": [
+    "id_13"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46281,
+   "lon": 30.34991
+  },
+  {
+   "id": "yefremova_11",
+   "title": "Єфремова, 11",
+   "entrance": null,
+   "description": "Поліклініка №6 (дитяча)",
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46396,
+   "lon": 30.34872
+  },
+  {
+   "id": "yefremova_13",
+   "title": "Єфремова, 13",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46344,
+   "lon": 30.34911
+  },
+  {
+   "id": "yefremova_15",
+   "title": "Єфремова, 15",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46315,
+   "lon": 30.34815
+  },
+  {
+   "id": "yefremova_16",
+   "title": "Єфремова, 16",
+   "entrance": null,
+   "description": "Хостел",
+   "groups": [],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46496,
+   "lon": 30.34988
+  },
+  {
+   "id": "yefremova_17",
+   "title": "Єфремова, 17",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46376,
+   "lon": 30.34693
+  },
+  {
+   "id": "yefremova_18",
+   "title": "Єфремова, 18",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46524,
+   "lon": 30.34883
+  },
+  {
+   "id": "yefremova_19",
+   "title": "Єфремова, 19",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46362,
+   "lon": 30.34324
+  },
+  {
+   "id": "yefremova_19a",
+   "title": "Єфремова, 19А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46336,
+   "lon": 30.3439
+  },
+  {
+   "id": "yefremova_20*1",
+   "title": "Єфремова, 20",
+   "entrance": "1-2",
+   "description": null,
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46571,
+   "lon": 30.34907
+  },
+  {
+   "id": "yefremova_20*2",
+   "title": "Єфремова, 20",
+   "entrance": "3-4",
+   "description": null,
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46525,
+   "lon": 30.34812
+  },
+  {
+   "id": "yefremova_21",
+   "title": "Єфремова, 21",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46298,
+   "lon": 30.34281
+  },
+  {
+   "id": "yefremova_21a",
+   "title": "Єфремова, 21А",
+   "entrance": null,
+   "description": "Школа №304",
+   "groups": [],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46197,
+   "lon": 30.34161
+  },
+  {
+   "id": "yefremova_23",
+   "title": "Єфремова, 23",
+   "entrance": null,
+   "description": "Континент",
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46344,
+   "lon": 30.34229
+  },
+  {
+   "id": "yefremova_25",
+   "title": "Єфремова, 25",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46354,
+   "lon": 30.34107
+  },
+  {
+   "id": "yefremova_27",
+   "title": "Єфремова, 27",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_27"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46311,
+   "lon": 30.33962
+  },
+  {
+   "id": "yefremova_29_22",
+   "title": "Єфремова, 29/22",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_27"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46299,
+   "lon": 30.33816
+  },
+  {
+   "id": "irpinska_2",
+   "title": "Ірпінська, 2",
+   "entrance": null,
+   "description": null,
+   "groups": [],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46126,
+   "lon": 30.36923
+  },
+  {
+   "id": "irpinska_62",
+   "title": "Ірпінська, 62",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg80"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46084,
+   "lon": 30.3538
+  },
+  {
+   "id": "irpinska_62a",
+   "title": "Ірпінська, 62А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg80"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46152,
+   "lon": 30.35359
+  },
+  {
+   "id": "irpinska_62b",
+   "title": "Ірпінська, 62Б",
+   "entrance": null,
+   "description": null,
+   "groups": [],
+   "dtekGroups": [
+    "7.1"
+   ],
+   "lat": 50.46054,
+   "lon": 30.35485
+  },
+  {
+   "id": "irpinska_63_5",
+   "title": "Ірпінська, 63/5",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.4598,
+   "lon": 30.35441
+  },
+  {
+   "id": "irpinska_63a",
+   "title": "Ірпінська, 63А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.4591,
+   "lon": 30.35454
+  },
+  {
+   "id": "irpinska_64",
+   "title": "Ірпінська, 64",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg80"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46042,
+   "lon": 30.3521
+  },
+  {
+   "id": "irpinska_65",
+   "title": "Ірпінська, 65",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45961,
+   "lon": 30.35296
+  },
+  {
+   "id": "irpinska_66",
+   "title": "Ірпінська, 66",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg80"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46115,
+   "lon": 30.35185
+  },
+  {
+   "id": "irpinska_67",
+   "title": "Ірпінська, 67",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45954,
+   "lon": 30.35189
+  },
+  {
+   "id": "irpinska_68",
+   "title": "Ірпінська, 68",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg80"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.4609,
+   "lon": 30.35034
+  },
+  {
+   "id": "irpinska_68a",
+   "title": "Ірпінська, 68А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_415",
+    "sg80"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.462,
+   "lon": 30.35059
+  },
+  {
+   "id": "irpinska_69",
+   "title": "Ірпінська, 69",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45946,
+   "lon": 30.35082
+  },
+  {
+   "id": "irpinska_69a",
+   "title": "Ірпінська, 69А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45873,
+   "lon": 30.35344
+  },
+  {
+   "id": "irpinska_69b",
+   "title": "Ірпінська, 69Б",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45866,
+   "lon": 30.35247
+  },
+  {
+   "id": "irpinska_70",
+   "title": "Ірпінська, 70",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46026,
+   "lon": 30.34985
+  },
+  {
+   "id": "irpinska_71",
+   "title": "Ірпінська, 71",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45939,
+   "lon": 30.34917
+  },
+  {
+   "id": "pump_irpinska",
+   "title": "Ірпінська, 71?",
+   "entrance": null,
+   "description": "Бювет",
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.459569,
+   "lon": 30.349683
+  },
+  {
+   "id": "irpinska_72",
+   "title": "Ірпінська, 72",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46163,
+   "lon": 30.34926
+  },
+  {
+   "id": "irpinska_74",
+   "title": "Ірпінська, 74",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.4614,
+   "lon": 30.34842
+  },
+  {
+   "id": "irpinska_74a",
+   "title": "Ірпінська, 74А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46243,
+   "lon": 30.34839
+  },
+  {
+   "id": "irpinska_76",
+   "title": "Ірпінська, 76",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_415",
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46024,
+   "lon": 30.34823
+  },
+  {
+   "id": "irpinska_78a",
+   "title": "Ірпінська, 78А",
+   "entrance": null,
+   "description": null,
+   "groups": [],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46083,
+   "lon": 30.34786
+  },
+  {
+   "id": "klavd_21",
+   "title": "Клавдіївська, 21",
+   "entrance": null,
+   "description": "Київський професійний коледж будівництва і комунального господарства (ПТУ-19)",
+   "groups": [
+    "id_33"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.47752,
+   "lon": 30.34657
+  },
+  {
+   "id": "klavd_22",
+   "title": "Клавдіївська, 22",
+   "entrance": null,
+   "description": "Київський професійний коледж будівництва і архітектури (ПТУ-8)",
+   "groups": [
+    "id_33"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.478566,
+   "lon": 30.346321
+  },
+  {
+   "id": "klavd_23_15",
+   "title": "Клавдіївська, 23/15",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_33"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.477733,
+   "lon": 30.344765
+  },
+  {
+   "id": "klavd_24",
+   "title": "Клавдіївська, 24",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_33"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.478771,
+   "lon": 30.348145
+  },
+  {
+   "id": "klavd_24a",
+   "title": "Клавдіївська, 24А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_33"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.47791,
+   "lon": 30.34779
+  },
+  {
+   "id": "klavd_27a",
+   "title": "Клавдіївська, 27А",
+   "entrance": null,
+   "description": "АТБ",
+   "groups": [
+    "id_33"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.477818,
+   "lon": 30.343435
+  },
+  {
+   "id": "klavd_32_4",
+   "title": "Клавдіївська, 32/4",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg10"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.478555,
+   "lon": 30.344551
+  },
+  {
+   "id": "klavd_34",
+   "title": "Клавдіївська, 34",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg10"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.478125,
+   "lon": 30.34396
+  },
+  {
+   "id": "klavd_36*1",
+   "title": "Клавдіївська, 36",
+   "entrance": "1-3",
+   "description": null,
+   "groups": [
+    "sg20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.478032,
+   "lon": 30.342614
+  },
+  {
+   "id": "klavd_36*2",
+   "title": "Клавдіївська, 36",
+   "entrance": "4-6",
+   "description": null,
+   "groups": [
+    "sg20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.47795,
+   "lon": 30.341348
+  },
+  {
+   "id": "klavd_36*3",
+   "title": "Клавдіївська, 36",
+   "entrance": "7-10",
+   "description": null,
+   "groups": [
+    "sg20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.478452,
+   "lon": 30.340841
+  },
+  {
+   "id": "klavd_40a",
+   "title": "Клавдіївська, 40А",
+   "entrance": null,
+   "description": "ЖК Грюнвальд",
+   "groups": [
+    "sg20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.478296,
+   "lon": 30.340173
+  },
+  {
+   "id": "klavd_40b",
+   "title": "Клавдіївська, 40Б",
+   "entrance": null,
+   "description": "ЖК Грюнвальд",
+   "groups": [
+    "sg20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.47788,
+   "lon": 30.340259
+  },
+  {
+   "id": "klavd_40v",
+   "title": "Клавдіївська, 40В",
+   "entrance": null,
+   "description": "ЖК Грюнвальд",
+   "groups": [
+    "sg20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.478347,
+   "lon": 30.339138
+  },
+  {
+   "id": "klavd_40g",
+   "title": "Клавдіївська, 40Г",
+   "entrance": null,
+   "description": "ЖК Грюнвальд",
+   "groups": [
+    "sg20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.477787,
+   "lon": 30.339202
+  },
+  {
+   "id": "klavd_40d",
+   "title": "Клавдіївська, 40Д",
+   "entrance": null,
+   "description": "ЖК Грюнвальд",
+   "groups": [
+    "sg20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.477839,
+   "lon": 30.338167
+  },
+  {
+   "id": "klavd_40e",
+   "title": "Клавдіївська, 40Є",
+   "entrance": null,
+   "description": "ЖК Грюнвальд",
+   "groups": [
+    "sg20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.478487,
+   "lon": 30.338033
+  },
+  {
+   "id": "klavd_40j",
+   "title": "Клавдіївська, 40Ж",
+   "entrance": null,
+   "description": "ЖК Грюнвальд",
+   "groups": [
+    "sg20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.478166,
+   "lon": 30.338065
+  },
+  {
+   "id": "korsunska_17_32",
+   "title": "Корсунська, 17/32",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg10"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.478299,
+   "lon": 30.345414
+  },
+  {
+   "id": "korsunska_33",
+   "title": "Корсунська, 33",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg10"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.478849,
+   "lon": 30.345269
+  },
+  {
+   "id": "korsunska_47",
+   "title": "Корсунська, 47",
+   "entrance": null,
+   "description": "ЖК Сосновий бір",
+   "groups": [
+    "sg10"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.479228,
+   "lon": 30.345345
+  },
+  {
+   "id": "kotelnykova_80",
+   "title": "Котельникова, 80",
+   "entrance": null,
+   "description": null,
+   "groups": [],
+   "dtekGroups": [
+    "6.1"
+   ],
+   "lat": 50.45109,
+   "lon": 30.35585
+  },
+  {
+   "id": "kotelnykova_87",
+   "title": "Котельникова, 87",
+   "entrance": null,
+   "description": null,
+   "groups": [],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45044,
+   "lon": 30.35679
+  },
+  {
+   "id": "kotelnykova_89",
+   "title": "Котельникова, 89",
+   "entrance": null,
+   "description": null,
+   "groups": [],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45038,
+   "lon": 30.35578
+  },
+  {
+   "id": "lvivska_51",
+   "title": "Львівська, 51",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_131"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45253,
+   "lon": 30.35453
+  },
+  {
+   "id": "lvivska_57a",
+   "title": "Львівська, 57А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_131"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45284,
+   "lon": 30.35174
+  },
+  {
+   "id": "lvivska_59",
+   "title": "Львівська, 59",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_127"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45257,
+   "lon": 30.35037
+  },
+  {
+   "id": "lvivska_59a",
+   "title": "Львівська, 59А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_127"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45232,
+   "lon": 30.35015
+  },
+  {
+   "id": "mudraka_1a",
+   "title": "Мудрака, 1А",
+   "entrance": null,
+   "description": "ЖК 4U",
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.47359,
+   "lon": 30.35516
+  },
+  {
+   "id": "mudraka_1b",
+   "title": "Мудрака, 1Б",
+   "entrance": null,
+   "description": "ЖК 4U",
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.47377,
+   "lon": 30.35451
+  },
+  {
+   "id": "mudraka_1v",
+   "title": "Мудрака, 1В",
+   "entrance": null,
+   "description": "ЖК 4U",
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.47348,
+   "lon": 30.3545
+  },
+  {
+   "id": "mudraka_15",
+   "title": "Мудрака, 15",
+   "entrance": null,
+   "description": "Інститут проблем моделювання в енергетиці",
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.47417,
+   "lon": 30.34648
+  },
+  {
+   "id": "mudraka_19*1",
+   "title": "Мудрака, 19",
+   "entrance": "1",
+   "description": null,
+   "groups": [
+    "sg50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.472103,
+   "lon": 30.341348
+  },
+  {
+   "id": "mudraka_19*2",
+   "title": "Мудрака, 19",
+   "entrance": "2-3",
+   "description": null,
+   "groups": [
+    "sg50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.472837,
+   "lon": 30.341203
+  },
+  {
+   "id": "mudraka_23",
+   "title": "Мудрака, 23",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.4735,
+   "lon": 30.336023
+  },
+  {
+   "id": "mudraka_23a*1",
+   "title": "Мудрака, 23А",
+   "entrance": "1",
+   "description": null,
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.472971,
+   "lon": 30.336758
+  },
+  {
+   "id": "mudraka_23a*2",
+   "title": "Мудрака, 23А",
+   "entrance": "2-3",
+   "description": null,
+   "groups": [
+    "sg10"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.472442,
+   "lon": 30.33675
+  },
+  {
+   "id": "mudraka_23b",
+   "title": "Мудрака, 23Б",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg10"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.472732,
+   "lon": 30.335615
+  },
+  {
+   "id": "mudraka_23v",
+   "title": "Мудрака, 23В",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.472074,
+   "lon": 30.335132
+  },
+  {
+   "id": "mudraka_25",
+   "title": "Мудрака, 25",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg10"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.473388,
+   "lon": 30.334027
+  },
+  {
+   "id": "mudraka_25a",
+   "title": "Мудрака, 25А",
+   "entrance": null,
+   "description": "Дитсадок №565",
+   "groups": [],
+   "dtekGroups": [],
+   "lat": 50.472949,
+   "lon": 30.334327
+  },
+  {
+   "id": "mudraka_27",
+   "title": "Мудрака, 27",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg10"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.473094,
+   "lon": 30.332836
+  },
+  {
+   "id": "pump_mudraka",
+   "title": "Мудрака, 27?",
+   "entrance": null,
+   "description": "Бювет",
+   "groups": [
+    "sg10"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.473956,
+   "lon": 30.333008
+  },
+  {
+   "id": "mudraka_29",
+   "title": "Мудрака, 29",
+   "entrance": null,
+   "description": "ЕКО маркет",
+   "groups": [],
+   "dtekGroups": [],
+   "lat": 50.472707,
+   "lon": 30.33223
+  },
+  {
+   "id": "mudraka_31",
+   "title": "Мудрака, 31",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.472211,
+   "lon": 30.332096
+  },
+  {
+   "id": "mudraka_31a",
+   "title": "Мудрака, 31А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.472097,
+   "lon": 30.333137
+  },
+  {
+   "id": "mudraka_33",
+   "title": "Мудрака, 33",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.471389,
+   "lon": 30.331106
+  },
+  {
+   "id": "mudraka_33a",
+   "title": "Мудрака, 33А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.471373,
+   "lon": 30.332208
+  },
+  {
+   "id": "mudraka_35a",
+   "title": "Мудрака, 35А",
+   "entrance": null,
+   "description": "Школа №72",
+   "groups": [
+    "sg20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.470085,
+   "lon": 30.331914
+  },
+  {
+   "id": "mudraka_35b",
+   "title": "Мудрака, 35Б",
+   "entrance": null,
+   "description": "Школа №230",
+   "groups": [
+    "sg20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.470737,
+   "lon": 30.330712
+  },
+  {
+   "id": "mudraka_37",
+   "title": "Мудрака, 37",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg70"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.468701,
+   "lon": 30.32981
+  },
+  {
+   "id": "mudraka_37a",
+   "title": "Мудрака, 37А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg30"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.469186,
+   "lon": 30.331141
+  },
+  {
+   "id": "mudraka_37b",
+   "title": "Мудрака, 37Б",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg30"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.468643,
+   "lon": 30.331511
+  },
+  {
+   "id": "mudraka_39",
+   "title": "Мудрака, 39",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg30"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.468025,
+   "lon": 30.330299
+  },
+  {
+   "id": "mudraka_41",
+   "title": "Мудрака, 41",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg70"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.467506,
+   "lon": 30.331259
+  },
+  {
+   "id": "mudraka_66",
+   "title": "Мудрака, 66",
+   "entrance": null,
+   "description": "ЖК Зелений мис",
+   "groups": [
+    "sg20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.47085,
+   "lon": 30.329641
+  },
+  {
+   "id": "naumovycha_4",
+   "title": "Наумовича, 4",
+   "entrance": null,
+   "description": "ЖК Озерний",
+   "groups": [
+    "sg60"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.464248,
+   "lon": 30.32814
+  },
+  {
+   "id": "naumovycha_4a",
+   "title": "Наумовича, 4А",
+   "entrance": null,
+   "description": "ЖК Озерний",
+   "groups": [
+    "sg70"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.464398,
+   "lon": 30.327217
+  },
+  {
+   "id": "naumovycha_6",
+   "title": "Наумовича, 6",
+   "entrance": null,
+   "description": "ЖК Озерний",
+   "groups": [
+    "sg70"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.463606,
+   "lon": 30.3283
+  },
+  {
+   "id": "obukhivska_137",
+   "title": "Обухівська, 137",
+   "entrance": null,
+   "description": "ЖК Озерний",
+   "groups": [
+    "sg70",
+    "sg60"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.465566,
+   "lon": 30.326536
+  },
+  {
+   "id": "obukhivska_137a",
+   "title": "Обухівська, 137А",
+   "entrance": null,
+   "description": "ЖК Озерний",
+   "groups": [
+    "sg70"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.465081,
+   "lon": 30.326412
+  },
+  {
+   "id": "obukhivska_139",
+   "title": "Обухівська, 139",
+   "entrance": null,
+   "description": "ЖК Озерний",
+   "groups": [
+    "sg70",
+    "sg60"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46576,
+   "lon": 30.325795
+  },
+  {
+   "id": "olevska_3a",
+   "title": "Олевська, 3А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.479525,
+   "lon": 30.342571
+  },
+  {
+   "id": "olevska_3b",
+   "title": "Олевська, 3Б",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.479542,
+   "lon": 30.34178
+  },
+  {
+   "id": "olevska_3v",
+   "title": "Олевська, 3В",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.479518,
+   "lon": 30.34128
+  },
+  {
+   "id": "olevska_3g*1",
+   "title": "Олевська, 3Г",
+   "entrance": "1",
+   "description": null,
+   "groups": [
+    "sg20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.4793,
+   "lon": 30.340929
+  },
+  {
+   "id": "olevska_3g*2",
+   "title": "Олевська, 3Г",
+   "entrance": "2",
+   "description": null,
+   "groups": [
+    "sg20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.478942,
+   "lon": 30.340972
+  },
+  {
+   "id": "olevska_5",
+   "title": "Олевська, 5",
+   "entrance": null,
+   "description": "ЖК Сосновий бір",
+   "groups": [
+    "sg10"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.479679,
+   "lon": 30.343462
+  },
+  {
+   "id": "olevska_7",
+   "title": "Олевська, 7",
+   "entrance": null,
+   "description": "ЖК Сосновий бір",
+   "groups": [
+    "sg10"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.47975,
+   "lon": 30.344669
+  },
+  {
+   "id": "olevska_9",
+   "title": "Олевська, 9",
+   "entrance": null,
+   "description": "ЖК Сосновий бір",
+   "groups": [
+    "sg10"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.479177,
+   "lon": 30.344213
+  },
+  {
+   "id": "olevska_11",
+   "title": "Олевська, 11",
+   "entrance": null,
+   "description": "ЖК Сосновий бір",
+   "groups": [
+    "sg10"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.47885,
+   "lon": 30.34396
+  },
+  {
+   "id": "osinnia_33",
+   "title": "Осіння, 33",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_33"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46646,
+   "lon": 30.34808
+  },
+  {
+   "id": "osinnia_35",
+   "title": "Осіння, 35",
+   "entrance": null,
+   "description": "Школа №55",
+   "groups": [],
+   "dtekGroups": [
+    "7.1"
+   ],
+   "lat": 50.46631,
+   "lon": 30.34682
+  },
+  {
+   "id": "osinnia_38a",
+   "title": "Осіння, 38А",
+   "entrance": null,
+   "description": "ЖК Осінній",
+   "groups": [
+    "sg10"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.467116,
+   "lon": 30.347551
+  },
+  {
+   "id": "palladina_7_60*1",
+   "title": "Палладіна, 7/60",
+   "entrance": "1-2",
+   "description": null,
+   "groups": [
+    "id_13"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46115,
+   "lon": 30.3547
+  },
+  {
+   "id": "palladina_7_60*2",
+   "title": "Палладіна, 7/60",
+   "entrance": "3-6",
+   "description": null,
+   "groups": [
+    "sg80"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46201,
+   "lon": 30.35457
+  },
+  {
+   "id": "palladina_7a",
+   "title": "Палладіна, 7А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_13",
+    "sg80"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46155,
+   "lon": 30.35551
+  },
+  {
+   "id": "palladina_9",
+   "title": "Палладіна, 9",
+   "entrance": null,
+   "description": null,
+   "groups": [],
+   "dtekGroups": [
+    "7.1"
+   ],
+   "lat": 50.46207,
+   "lon": 30.35355
+  },
+  {
+   "id": "palladina_11",
+   "title": "Палладіна, 11",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg80"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46194,
+   "lon": 30.3527
+  },
+  {
+   "id": "palladina_13*1",
+   "title": "Палладіна, 13",
+   "entrance": "1-3",
+   "description": null,
+   "groups": [
+    "id_13"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46308,
+   "lon": 30.35308
+  },
+  {
+   "id": "palladina_13*2",
+   "title": "Палладіна, 13",
+   "entrance": "4-5",
+   "description": null,
+   "groups": [
+    "sg80"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.4639,
+   "lon": 30.35307
+  },
+  {
+   "id": "palladina_16_39",
+   "title": "Палладіна, 16/39",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_24"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45899,
+   "lon": 30.35779
+  },
+  {
+   "id": "palladina_18_30",
+   "title": "Палладіна, 18/30",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_20",
+    "id_24"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46008,
+   "lon": 30.35745
+  },
+  {
+   "id": "palladina_20",
+   "title": "Палладіна, 20",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46099,
+   "lon": 30.35724
+  },
+  {
+   "id": "palladina_21",
+   "title": "Палладіна, 21",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_33"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46692,
+   "lon": 30.35351
+  },
+  {
+   "id": "palladina_21*4",
+   "title": "Палладіна, 21",
+   "entrance": "3-4",
+   "description": null,
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46652,
+   "lon": 30.35296
+  },
+  {
+   "id": "palladina_22",
+   "title": "Палладіна, 22",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46138,
+   "lon": 30.35708
+  },
+  {
+   "id": "palladina_23",
+   "title": "Палладіна, 23",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_33"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46627,
+   "lon": 30.35342
+  },
+  {
+   "id": "palladina_24",
+   "title": "Палладіна, 24",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_26"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46245,
+   "lon": 30.35719
+  },
+  {
+   "id": "palladina_25",
+   "title": "Палладіна, 25",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_33",
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46718,
+   "lon": 30.35431
+  },
+  {
+   "id": "palladina_25a",
+   "title": "Палладіна, 25А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_33",
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46748,
+   "lon": 30.35386
+  },
+  {
+   "id": "pidlisna_1",
+   "title": "Підлісна, 1",
+   "entrance": null,
+   "description": "Сільпо",
+   "groups": [
+    "sg10"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.472215,
+   "lon": 30.337589
+  },
+  {
+   "id": "pidlisna_2",
+   "title": "Підлісна, 2",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg40"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.472236,
+   "lon": 30.339421
+  },
+  {
+   "id": "pidlisna_3",
+   "title": "Підлісна, 3",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_415",
+    "sg10"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.472684,
+   "lon": 30.33808
+  },
+  {
+   "id": "pidlisna_4",
+   "title": "Підлісна, 4",
+   "entrance": null,
+   "description": "Дитсадок №789",
+   "groups": [
+    "sg40"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.472858,
+   "lon": 30.340075
+  },
+  {
+   "id": "pidlisna_5_21",
+   "title": "Підлісна, 5/21",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg10"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.473338,
+   "lon": 30.337685
+  },
+  {
+   "id": "pidlisna_6*1",
+   "title": "Підлісна, 6",
+   "entrance": "1-2",
+   "description": null,
+   "groups": [
+    "sg40"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.473172,
+   "lon": 30.339252
+  },
+  {
+   "id": "pidlisna_6*3",
+   "title": "Підлісна, 6",
+   "entrance": "3",
+   "description": null,
+   "groups": [
+    "sg40"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.4734,
+   "lon": 30.339552
+  },
+  {
+   "id": "pidlisna_6*4",
+   "title": "Підлісна, 6",
+   "entrance": "4-5",
+   "description": null,
+   "groups": [
+    "sg50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.473695,
+   "lon": 30.340035
+  },
+  {
+   "id": "pidlisna_8",
+   "title": "Підлісна, 8",
+   "entrance": null,
+   "description": "Новобілицький ПНІЧ",
+   "groups": [
+    "sg20",
+    "sg40"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.47532,
+   "lon": 30.33933
+  },
+  {
+   "id": "popovycha_8",
+   "title": "Поповича, 8",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_71"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46468,
+   "lon": 30.36326
+  },
+  {
+   "id": "popovycha_8a",
+   "title": "Поповича, 8А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_71"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46382,
+   "lon": 30.36397
+  },
+  {
+   "id": "popovycha_9",
+   "title": "Поповича, 9",
+   "entrance": null,
+   "description": "Школа №200",
+   "groups": [
+    "id_20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46276,
+   "lon": 30.3617
+  },
+  {
+   "id": "popovycha_10",
+   "title": "Поповича, 10",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_71"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46316,
+   "lon": 30.3635
+  },
+  {
+   "id": "popovycha_12",
+   "title": "Поповича, 12",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_71"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46173,
+   "lon": 30.36374
+  },
+  {
+   "id": "popovycha_13",
+   "title": "Поповича, 13",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_26"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46059,
+   "lon": 30.36225
+  },
+  {
+   "id": "popovycha_15*1",
+   "title": "Поповича, 15",
+   "entrance": "1-4",
+   "description": null,
+   "groups": [
+    "id_20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46091,
+   "lon": 30.36254
+  },
+  {
+   "id": "popovycha_15*2",
+   "title": "Поповича, 15",
+   "entrance": "5-7",
+   "description": null,
+   "groups": [
+    "id_26"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46107,
+   "lon": 30.36164
+  },
+  {
+   "id": "popovycha_16",
+   "title": "Поповича, 16",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_26"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46076,
+   "lon": 30.36399
+  },
+  {
+   "id": "popovycha_17",
+   "title": "Поповича, 17",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_26"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46193,
+   "lon": 30.36273
+  },
+  {
+   "id": "popovycha_21",
+   "title": "Поповича, 21",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46396,
+   "lon": 30.36235
+  },
+  {
+   "id": "pryladnyi_4",
+   "title": "Приладний, 4",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg90"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.47343,
+   "lon": 30.3609
+  },
+  {
+   "id": "pryladnyi_6",
+   "title": "Приладний, 6",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg90"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.47337,
+   "lon": 30.36194
+  },
+  {
+   "id": "pryladnyi_8",
+   "title": "Приладний, 8",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg90"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.47334,
+   "lon": 30.36268
+  },
+  {
+   "id": "pryladnyi_10a",
+   "title": "Приладний, 10А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg90"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.47116,
+   "lon": 30.363
+  },
+  {
+   "id": "pryladnyi_10b",
+   "title": "Приладний, 10Б",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg90"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.47071,
+   "lon": 30.3628
+  },
+  {
+   "id": "pryladnyi_10v",
+   "title": "Приладний, 10В",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg90"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.47027,
+   "lon": 30.36259
+  },
+  {
+   "id": "pryluzhna_4_15",
+   "title": "Прилужна, 4/15",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46008,
+   "lon": 30.34443
+  },
+  {
+   "id": "pryluzhna_6",
+   "title": "Прилужна, 6",
+   "entrance": null,
+   "description": null,
+   "groups": [],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46026,
+   "lon": 30.34346
+  },
+  {
+   "id": "pryluzhna_8",
+   "title": "Прилужна, 8",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46075,
+   "lon": 30.34265
+  },
+  {
+   "id": "pryluzhna_10",
+   "title": "Прилужна, 10",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.4612,
+   "lon": 30.34308
+  },
+  {
+   "id": "pryluzhna_12",
+   "title": "Прилужна, 12",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_27"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46111,
+   "lon": 30.34057
+  },
+  {
+   "id": "pryluzhna_14",
+   "title": "Прилужна, 14",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_27"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46074,
+   "lon": 30.3409
+  },
+  {
+   "id": "pryluzhna_14a",
+   "title": "Прилужна, 14А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_27"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46041,
+   "lon": 30.33948
+  },
+  {
+   "id": "pritsaka_3",
+   "title": "Пріцака, 3",
+   "entrance": null,
+   "description": "Інститут проблем матеріалознавства",
+   "groups": [
+    "sg90"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46932,
+   "lon": 30.36891
+  },
+  {
+   "id": "rahmaninova_24",
+   "title": "Рахманінова, 24",
+   "entrance": null,
+   "description": null,
+   "groups": [],
+   "dtekGroups": [],
+   "lat": 50.476954,
+   "lon": 30.34646
+  },
+  {
+   "id": "rahmaninova_30_13*1",
+   "title": "Рахманінова, 30/13",
+   "entrance": "1-2",
+   "description": null,
+   "groups": [
+    "id_33"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.47678,
+   "lon": 30.34495
+  },
+  {
+   "id": "rahmaninova_30_13*2",
+   "title": "Рахманінова, 30/13",
+   "entrance": "3-4",
+   "description": null,
+   "groups": [
+    "id_33"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.477039,
+   "lon": 30.345563
+  },
+  {
+   "id": "rahmaninova_30a_13",
+   "title": "Рахманінова, 30А/13",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_33"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.476764,
+   "lon": 30.344579
+  },
+  {
+   "id": "rahmaninova_47",
+   "title": "Рахманінова, 47",
+   "entrance": null,
+   "description": "Школа №162",
+   "groups": [
+    "id_33"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.475981,
+   "lon": 30.345141
+  },
+  {
+   "id": "sviat_sq_1",
+   "title": "Святошинська площа, 1",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_73"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45817,
+   "lon": 30.36312
+  },
+  {
+   "id": "stusa_2",
+   "title": "Стуса, 2",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_24"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.4607,
+   "lon": 30.36748
+  },
+  {
+   "id": "stusa_5",
+   "title": "Стуса, 5",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_73"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45988,
+   "lon": 30.36758
+  },
+  {
+   "id": "stusa_7",
+   "title": "Стуса, 7",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_73"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.4598,
+   "lon": 30.36634
+  },
+  {
+   "id": "stusa_7b",
+   "title": "Стуса, 7Б",
+   "entrance": null,
+   "description": "ЖК Гармонія",
+   "groups": [
+    "id_73"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45949,
+   "lon": 30.36646
+  },
+  {
+   "id": "stusa_9",
+   "title": "Стуса, 9",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_73"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45972,
+   "lon": 30.36449
+  },
+  {
+   "id": "stusa_23_9",
+   "title": "Стуса, 23/9",
+   "entrance": null,
+   "description": null,
+   "groups": [],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45962,
+   "lon": 30.36305
+  },
+  {
+   "id": "stusa_24",
+   "title": "Стуса, 24",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_26"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46014,
+   "lon": 30.36212
+  },
+  {
+   "id": "stusa_25",
+   "title": "Стуса, 25",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_24"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.4596,
+   "lon": 30.36254
+  },
+  {
+   "id": "stusa_26",
+   "title": "Стуса, 26",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_26"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45996,
+   "lon": 30.36053
+  },
+  {
+   "id": "stusa_26a",
+   "title": "Стуса, 26А",
+   "entrance": null,
+   "description": "Дитсадок №599",
+   "groups": [
+    "id_26"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46108,
+   "lon": 30.36013
+  },
+  {
+   "id": "stusa_27",
+   "title": "Стуса, 27",
+   "entrance": null,
+   "description": null,
+   "groups": [],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45952,
+   "lon": 30.36175
+  },
+  {
+   "id": "stusa_28",
+   "title": "Стуса, 28",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_17"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45985,
+   "lon": 30.35907
+  },
+  {
+   "id": "stusa_28a",
+   "title": "Стуса, 28А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_17"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46064,
+   "lon": 30.3588
+  },
+  {
+   "id": "stusa_35_37",
+   "title": "Стуса, 35-37",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50",
+    "id_20"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45934,
+   "lon": 30.3587
+  },
+  {
+   "id": "stusa_35b",
+   "title": "Стуса, 35Б",
+   "entrance": null,
+   "description": "ЖК Be The One",
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45856,
+   "lon": 30.35919
+  },
+  {
+   "id": "ushakova_1b",
+   "title": "Ушакова, 1Б",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50",
+    "id_73"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45897,
+   "lon": 30.33749
+  },
+  {
+   "id": "ushakova_1v",
+   "title": "Ушакова, 1В",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50",
+    "id_73"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45946,
+   "lon": 30.33737
+  },
+  {
+   "id": "ushakova_1g",
+   "title": "Ушакова, 1Г",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50",
+    "id_73"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45836,
+   "lon": 30.33776
+  },
+  {
+   "id": "ushakova_1d",
+   "title": "Ушакова, 1Д",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50",
+    "id_73"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45994,
+   "lon": 30.33755
+  },
+  {
+   "id": "ushakova_2",
+   "title": "Ушакова, 2",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45547,
+   "lon": 30.34271
+  },
+  {
+   "id": "ushakova_4",
+   "title": "Ушакова, 4",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45581,
+   "lon": 30.3423
+  },
+  {
+   "id": "ushakova_6",
+   "title": "Ушакова, 6",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45615,
+   "lon": 30.34294
+  },
+  {
+   "id": "ushakova_8",
+   "title": "Ушакова, 8",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.4566,
+   "lon": 30.34245
+  },
+  {
+   "id": "ushakova_8a",
+   "title": "Ушакова, 8А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45701,
+   "lon": 30.34386
+  },
+  {
+   "id": "ushakova_10",
+   "title": "Ушакова, 10",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45731,
+   "lon": 30.34073
+  },
+  {
+   "id": "ushakova_10a",
+   "title": "Ушакова, 10А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45745,
+   "lon": 30.34213
+  },
+  {
+   "id": "ushakova_12",
+   "title": "Ушакова, 12",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45805,
+   "lon": 30.33973
+  },
+  {
+   "id": "ushakova_12a",
+   "title": "Ушакова, 12А",
+   "entrance": null,
+   "description": "Школа №50",
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45848,
+   "lon": 30.341
+  },
+  {
+   "id": "ushakova_14",
+   "title": "Ушакова, 14",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45871,
+   "lon": 30.33875
+  },
+  {
+   "id": "ushakova_14a",
+   "title": "Ушакова, 14А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_27"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45978,
+   "lon": 30.33908
+  },
+  {
+   "id": "ushakova_16",
+   "title": "Ушакова, 16",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_27"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46098,
+   "lon": 30.33847
+  },
+  {
+   "id": "ushakova_16a",
+   "title": "Ушакова, 16А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_27"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46108,
+   "lon": 30.3397
+  },
+  {
+   "id": "ushakova_18",
+   "title": "Ушакова, 18",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_27"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46148,
+   "lon": 30.33907
+  },
+  {
+   "id": "ushakova_20",
+   "title": "Ушакова, 20",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_27"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.4626,
+   "lon": 30.33967
+  },
+  {
+   "id": "ushakova_20a",
+   "title": "Ушакова, 20А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_27"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46222,
+   "lon": 30.33818
+  },
+  {
+   "id": "ushakova_34",
+   "title": "Ушакова, 34",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg70"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.465544,
+   "lon": 30.334906
+  },
+  {
+   "id": "ushakova_34a",
+   "title": "Ушакова, 34А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "sg70"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.465973,
+   "lon": 30.334029
+  },
+  {
+   "id": "chornobylska_3",
+   "title": "Чорнобильська, 3",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.4561,
+   "lon": 30.34575
+  },
+  {
+   "id": "chornobylska_4_56",
+   "title": "Чорнобильська, 4/56",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.457,
+   "lon": 30.34744
+  },
+  {
+   "id": "chornobylska_5_7",
+   "title": "Чорнобильська, 5/7",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45682,
+   "lon": 30.34548
+  },
+  {
+   "id": "chornobylska_6",
+   "title": "Чорнобильська, 6",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_73"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45814,
+   "lon": 30.34729
+  },
+  {
+   "id": "chornobylska_9",
+   "title": "Чорнобильська, 9",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45807,
+   "lon": 30.34463
+  },
+  {
+   "id": "chornobylska_9a",
+   "title": "Чорнобильська, 9А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45792,
+   "lon": 30.34376
+  },
+  {
+   "id": "chornobylska_10",
+   "title": "Чорнобильська, 10",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_73"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45827,
+   "lon": 30.34938
+  },
+  {
+   "id": "chornobylska_10a",
+   "title": "Чорнобильська, 10А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_73"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45749,
+   "lon": 30.34948
+  },
+  {
+   "id": "chornobylska_10b",
+   "title": "Чорнобильська, 10Б",
+   "entrance": null,
+   "description": null,
+   "groups": [],
+   "dtekGroups": [],
+   "lat": 50.45808,
+   "lon": 30.35053
+  },
+  {
+   "id": "chornobylska_11",
+   "title": "Чорнобильська, 11",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45863,
+   "lon": 30.34454
+  },
+  {
+   "id": "chornobylska_11a",
+   "title": "Чорнобильська, 11А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.4585,
+   "lon": 30.34367
+  },
+  {
+   "id": "chornobylska_12",
+   "title": "Чорнобильська, 12",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45879,
+   "lon": 30.34738
+  },
+  {
+   "id": "chornobylska_12a",
+   "title": "Чорнобильська, 12А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45892,
+   "lon": 30.34903
+  },
+  {
+   "id": "chornobylska_13",
+   "title": "Чорнобильська, 13",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.4592,
+   "lon": 30.34445
+  },
+  {
+   "id": "chornobylska_13a",
+   "title": "Чорнобильська, 13А",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45908,
+   "lon": 30.34366
+  },
+  {
+   "id": "chornobylska_13b",
+   "title": "Чорнобильська, 13Б",
+   "entrance": null,
+   "description": "Відділ поліції №1",
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45945,
+   "lon": 30.34389
+  },
+  {
+   "id": "chornobylska_14",
+   "title": "Чорнобильська, 14",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_50"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.45919,
+   "lon": 30.34809
+  },
+  {
+   "id": "chornobylska_15a",
+   "title": "Чорнобильська, 15А",
+   "entrance": null,
+   "description": null,
+   "groups": [],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46123,
+   "lon": 30.34524
+  },
+  {
+   "id": "chornobylska_16_80",
+   "title": "Чорнобильська, 16/80",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46077,
+   "lon": 30.34697
+  },
+  {
+   "id": "chornobylska_17*1",
+   "title": "Чорнобильська, 17",
+   "entrance": "1",
+   "description": null,
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46209,
+   "lon": 30.34485
+  },
+  {
+   "id": "chornobylska_17*2",
+   "title": "Чорнобильська, 17",
+   "entrance": "2-7",
+   "description": null,
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46117,
+   "lon": 30.34458
+  },
+  {
+   "id": "chornobylska_18",
+   "title": "Чорнобильська, 18",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46189,
+   "lon": 30.34644
+  },
+  {
+   "id": "chornobylska_19",
+   "title": "Чорнобильська, 19",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.4621,
+   "lon": 30.3439
+  },
+  {
+   "id": "chornobylska_19a",
+   "title": "Чорнобильська, 19А",
+   "entrance": null,
+   "description": "Дитсадок №71",
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46208,
+   "lon": 30.34291
+  },
+  {
+   "id": "chornobylska_20",
+   "title": "Чорнобильська, 20",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46228,
+   "lon": 30.34735
+  },
+  {
+   "id": "chornobylska_21",
+   "title": "Чорнобильська, 21",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46303,
+   "lon": 30.3447
+  },
+  {
+   "id": "chornobylska_22",
+   "title": "Чорнобильська, 22",
+   "entrance": null,
+   "description": null,
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46292,
+   "lon": 30.34631
+  },
+  {
+   "id": "chornobylska_24_26*1",
+   "title": "Чорнобильська, 24/26",
+   "entrance": "1",
+   "description": null,
+   "groups": [
+    "id_33"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46557,
+   "lon": 30.34585
+  },
+  {
+   "id": "chornobylska_24_26*2",
+   "title": "Чорнобильська, 24/26",
+   "entrance": "2-3",
+   "description": null,
+   "groups": [
+    "id_33"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46537,
+   "lon": 30.34609
+  },
+  {
+   "id": "chornobylska_24_26*3",
+   "title": "Чорнобильська, 24/26",
+   "entrance": "4-6",
+   "description": null,
+   "groups": [
+    "id_415"
+   ],
+   "dtekGroups": [
+    "12.1"
+   ],
+   "lat": 50.46503,
+   "lon": 30.34685
+  }
+ ]
+}

@@ -1,0 +1,35 @@
+{
+  "name": "electricity-outage-analyzer",
+  "version": "2.0.0",
+  "description": "Атлас світла по підгрупах «Підгрупи 6.2»: Telegram-канал → карта адрес та історія на GitHub Pages",
+  "main": "analyze_electricity.js",
+  "scripts": {
+    "start": "node tools/build-site.js && node tools/serve.js _site",
+    "build": "node tools/build-site.js",
+    "fetch": "node tools/fetch-telegram.js",
+    "analyze": "node analyze_electricity.js",
+    "test": "node --test tests/*.test.js",
+    "test:browser": "node tools/browser-check.js"
+  },
+  "keywords": [
+    "electricity",
+    "power-outage",
+    "telegram",
+    "ukraine",
+    "analytics",
+    "statistics"
+  ],
+  "author": "Alezx311",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "analyze-electricity": "./analyze_electricity.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alezx311/light_stat.git"
+  },
+  "homepage": "https://alezx311.github.io/light_stat/"
+}

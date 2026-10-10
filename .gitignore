@@ -1,0 +1,8 @@
+.cache/
+node_modules/
+*.log
+_site/
+# Raw Telegram exports and local analysis outputs stay local; data/events.json is the published store.
+result.json
+data_light_stat.json
+electricity_analysis*.json
