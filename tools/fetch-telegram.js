@@ -16,7 +16,7 @@ const CHANNEL = 'subgroups62';
 const MAX_PAGES = 50;
 
 function readStore(file = STORE) { return JSON.parse(fs.readFileSync(file, 'utf8')); }
-// One event per line keeps hourly git diffs small and readable.
+// One event per line keeps incremental git diffs small and readable.
 function writeStore(store, file = STORE) {
   const head = JSON.stringify({...store, events: undefined}, null, 2).replace(/\n}$/, '');
   const lines = store.events.map(e => '    ' + JSON.stringify(e));
@@ -75,12 +75,19 @@ async function update(store, {fetchPage, now = Date.now, sleep = () => Promise.r
   return {added, messages: fresh.size};
 }
 
-async function fetchPage(channel, before) {
+async function fetchPage(channel, before, {request = fetch, sleep = ms => new Promise(r => setTimeout(r, ms))} = {}) {
   const url = 'https://t.me/s/' + channel + (before ? '?before=' + before : '');
-  const response = await fetch(url, {headers: {'User-Agent': 'light-stat (+https://github.com/Alezx311/light_stat)'},
-    signal: AbortSignal.timeout(20000)});
-  if (!response.ok) throw Object.assign(new Error('HTTP ' + response.status + ' для ' + url), {network: true});
-  return response.text();
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      const response = await request(url, {headers: {'User-Agent': 'light-stat (+https://github.com/Alezx311/light_stat)'},
+        cache: 'no-store', signal: AbortSignal.timeout(20000)});
+      if (!response.ok) throw new Error('HTTP ' + response.status + ' для ' + url);
+      return await response.text();
+    } catch (error) {
+      if (attempt === 2) throw new Error('Telegram недоступний після 3 спроб; дані не змінено: ' + error.message, {cause: error});
+      await sleep(1000 * 2 ** attempt);
+    }
+  }
 }
 
 async function main(args) {
@@ -92,18 +99,10 @@ async function main(args) {
     return;
   }
   const store = readStore();
-  let result;
-  try {
-    result = await update(store, {fetchPage: (channel, before) => fetchPage(channel, before).catch(error => {
-      throw Object.assign(error, {network: true});
-    }), sleep: ms => new Promise(r => setTimeout(r, ms))});
-  } catch (error) {
-    if (error.network) { console.warn('Telegram недоступний, дані не змінено: ' + error.message); return; }
-    throw error;
-  }
+  const result = await update(store, {fetchPage, sleep: ms => new Promise(r => setTimeout(r, ms))});
   writeStore(store);
   console.log('New messages: ' + result.messages + ', events: ' + result.added + ', observed until ' + store.sources[0].observedUntil);
 }
 
 if (require.main === module) main(process.argv.slice(2)).catch(error => { console.error(error.message); process.exit(1); });
-module.exports = {seed, update, readStore, writeStore, STORE};
+module.exports = {seed, update, fetchPage, readStore, writeStore, STORE};

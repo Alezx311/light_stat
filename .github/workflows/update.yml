@@ -2,7 +2,9 @@ name: Update data and deploy
 
 on:
   schedule:
-    - cron: '17 * * * *'
+    # Five-minute cadence, offset from the busiest minute at the start of the hour.
+    # GitHub may delay scheduled runs; the UI independently expires old snapshots.
+    - cron: '2-57/5 * * * *'
   workflow_dispatch:
   push:
     branches: [main]
@@ -19,11 +21,14 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - uses: actions/setup-node@v4
         with:

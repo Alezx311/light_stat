@@ -5,7 +5,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const E = require('../lib/electricity');
 const {parseChannelPage, parseEhMap, decode} = require('../tools/sources');
-const {seed, update} = require('../tools/fetch-telegram');
+const {seed, update, fetchPage} = require('../tools/fetch-telegram');
 const {buildSummary, compact} = require('../tools/summary');
 
 const fixture = name => fs.readFileSync(path.join(__dirname, 'fixtures', name), 'utf8');
@@ -92,6 +92,32 @@ test('seed converts a Telegram export into the event store', () => {
   assert.equal(s.sources[0].observedUntil, new Date(T('02:00')).toISOString());
   assert.deepEqual(s.events.map(e => [e.id, e.state]), [['1', 'on'], ['2', 'off']]);
   assert.equal(E.importData(s, 'events.json').events.length, 2);
+});
+
+test('transient Telegram HTTP and body failures are retried before advancing the check time', async () => {
+  let attempts = 0;
+  const delays = [];
+  const html = page([[100, '2026-02-01T00:00:00Z', '✅ sg1 увімкнено']]);
+  const result = await fetchPage('chan', null, {sleep: async ms => delays.push(ms), request: async () => {
+    attempts++;
+    if (attempts === 1) return {ok: false, status: 503};
+    if (attempts === 2) return {ok: true, text: async () => { throw new Error('connection lost'); }};
+    return {ok: true, text: async () => html};
+  }});
+  assert.equal(result, html); assert.equal(attempts, 3); assert.deepEqual(delays, [1000, 2000]);
+});
+
+test('failed catch-up preserves events, cursor and actual check time', async () => {
+  const s = store([[T('00:00'), 'sg1', 'on']], new Date(T('00:00')).toISOString(), 100);
+  const before = structuredClone(s);
+  let attempts = 0;
+  await assert.rejects(update(s, {fetchPage: async (channel, cursor) => {
+    if (cursor === null) return page([[103, '2026-02-01T03:00:00Z', '🔴 sg1 вимкнено']]);
+    return fetchPage(channel, cursor, {sleep: async () => {}, request: async () => { attempts++; throw new Error('offline'); }});
+  }}), /після 3 спроб/);
+  assert.equal(attempts, 3); assert.deepEqual(s, before);
+  await assert.rejects(update(s, {fetchPage: async () => '<html></html>'}), /не знайдено/);
+  assert.deepEqual(s, before);
 });
 
 test('eh-map snapshot keeps unique addresses, both inputs, entrances and polygons', () => {

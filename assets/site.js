@@ -1,22 +1,26 @@
-/* global L, LightStat */
+/* global L, LightStat, LightStatLive */
 'use strict';
 (() => {
   const E = LightStat;
+  const live = LightStatLive;
   const $ = id => document.getElementById(id);
   const HOUR = E.HOUR;
   const state = {summary: null, addresses: null, groups: new Map(), range: 'day', sort: 'state', map: null,
-    markers: [], markersByGroup: new Map(), polygonsByGroup: new Map(), archive: null, archivePromise: null};
+    markers: [], markersByGroup: new Map(), polygonsByGroup: new Map(), archivePromise: null,
+    refreshError: null, detailVersion: 0, lastStale: null, initialized: false};
   const esc = value => String(value == null ? '' : value).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
   const timeFmt = new Intl.DateTimeFormat('uk-UA', {timeZone: E.ZONE, hour: '2-digit', minute: '2-digit'});
   const dayFmt = new Intl.DateTimeFormat('uk-UA', {timeZone: E.ZONE, day: '2-digit', month: '2-digit'});
   const fullFmt = new Intl.DateTimeFormat('uk-UA', {timeZone: E.ZONE, day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit'});
   const pct = v => v == null ? '—' : Math.round(v * 100) + '%';
   const stateName = {on: 'Є світло', off: 'Немає світла', unknown: 'Невідомо'};
+  const reportName = {on: 'Увімкнено', off: 'Вимкнено', unknown: 'Стан невідомий'};
   const now = () => Date.parse(state.summary.observedUntil);
+  const freshness = () => live.freshness(state.summary?.observedUntil);
 
   function when(time) {
     if (time == null) return '—';
-    return E.dateKey(time) === E.dateKey(now()) ? timeFmt.format(time) : dayFmt.format(time) + ' ' + timeFmt.format(time);
+    return E.dateKey(time) === E.dateKey(Date.now()) ? timeFmt.format(time) : dayFmt.format(time) + ' ' + timeFmt.format(time);
   }
   function duration(ms) {
     const minutes = Math.round(ms / 60000);
@@ -27,8 +31,7 @@
     return hours + ' год' + (minutes % 60 ? ' ' + (minutes % 60) + ' хв' : '');
   }
   function groupState(id) {
-    const g = state.groups.get(id);
-    return g && g.active ? g.state : 'unknown';
+    return live.groupState(state.groups.get(id), state.summary?.observedUntil);
   }
   function dotHtml(ids) {
     const states = ids.length ? ids.map(groupState) : ['unknown'];
@@ -64,8 +67,9 @@
   // --- list ---------------------------------------------------------------
   function nowHtml(g) {
     if (!g.active) return '<div class="now"><i class="dot s-unknown"></i><span><b>Невідомо</b> <small>останнє: ' + esc(g.lastEvent ? dayFmt.format(Date.parse(g.lastEvent)) + '.' + E.dateKey(Date.parse(g.lastEvent)).slice(0, 4) : '—') + '</small></span></div>';
-    const since = Date.parse(g.since);
-    return '<div class="now' + (g.state === 'off' ? ' s-off-text' : '') + '"><i class="dot s-' + g.state + '"></i><span><b>' + stateName[g.state] + '</b> <small>з ' + esc(when(since)) + ' · ' + esc(duration(now() - since)) + '</small></span></div>';
+    const s = groupState(g.id), since = g.since ? Date.parse(g.since) : null;
+    return '<div class="now' + (s === 'off' ? ' s-off-text' : '') + '"><i class="dot s-' + s + '"></i><span><b>' + reportName[s] + '</b> <small>' +
+      (freshness().stale ? 'дані застаріли' : since == null ? 'немає підтвердження' : 'за каналом з ' + esc(when(since))) + '</small></span></div>';
   }
   function rowHtml(g) {
     const w = state.summary.windows[state.range];
@@ -79,7 +83,7 @@
     const byName = (a, b) => a.id.localeCompare(b.id, 'en', {numeric: true});
     const rank = {off: 0, unknown: 1, on: 2};
     const sorters = {
-      state: (a, b) => rank[a.state] - rank[b.state] || (a.state === 'off' ? Date.parse(a.since) - Date.parse(b.since) : 0) || byName(a, b),
+      state: (a, b) => rank[groupState(a.id)] - rank[groupState(b.id)] || (groupState(a.id) === 'off' ? Date.parse(a.since) - Date.parse(b.since) : 0) || byName(a, b),
       availability: (a, b) => (a.week.availability ?? 2) - (b.week.availability ?? 2) || byName(a, b),
       name: byName};
     const active = all.filter(g => g.active).sort(sorters[state.sort]);
@@ -93,10 +97,16 @@
   }
   function renderStatus() {
     const s = state.summary, c = s.counts;
-    $('status').classList.toggle('has-off', c.off > 0);
-    $('statusText').innerHTML = 'Зараз без світла: <strong>' + c.off + ' з ' + c.active + '</strong> підгруп · перевірено ' + esc(when(now()));
+    const f = freshness();
+    $('status').classList.toggle('has-off', !f.stale && c.off > 0);
+    $('status').classList.toggle('is-stale', f.stale);
+    $('statusText').textContent = (f.stale ? 'Дані застаріли · стан невідомий' : 'За каналом: вимкнено ' + c.off + ' з ' + c.active + ' підгруп') +
+      ' · перевірено ' + when(now()) + ' (' + duration(f.age) + ' тому)';
     $('footerTime').textContent = 'Канал перевірено ' + fullFmt.format(now()) + ' · час Києва';
-    if (state.addresses) $('addressesDate').textContent = fullFmt.format(Date.parse(state.addresses.source.retrievedAt)).slice(0, 10);
+    if (state.addresses?.source?.retrievedAt) $('addressesDate').textContent = fullFmt.format(Date.parse(state.addresses.source.retrievedAt)).slice(0, 10);
+    notice([f.stale ? 'Канал давно не перевірявся. Поточний стан світла невідомий; кольорові смуги показують лише збережену історію.' : '',
+      state.refreshError ? 'Не вдалося отримати оновлення. Повторимо за хвилину. Час перевірки каналу не змінився.' : '',
+      state.addresses && !state.addresses.source ? 'Адреси недоступні: показано лише підгрупи.' : ''].filter(Boolean).join(' '));
   }
 
   // --- map ----------------------------------------------------------------
@@ -106,7 +116,8 @@
     const groups = a.groups.map(id => {
       const g = state.groups.get(id);
       if (!g) return '<div class="sg"><div class="sg-head"><b>' + esc(id.toUpperCase()) + '</b><span>немає в каналі</span></div></div>';
-      const status = g.active ? stateName[g.state] + ' з ' + when(Date.parse(g.since)) : 'немає свіжих повідомлень';
+      const s = groupState(id);
+      const status = reportName[s] + (s !== 'unknown' && g.since ? ' за каналом з ' + when(Date.parse(g.since)) : '');
       return '<div class="sg"><div class="sg-head"><a href="#sg=' + esc(id) + '">' + esc(g.label) + '</a><span>' + dotHtml([id]) + ' ' + esc(status) + '</span></div>' +
         stripHtml(g.day.intervals, Date.parse(day.from), Date.parse(day.to), stripLabel(g, 'day')) + '</div>';
     }).join('');
@@ -141,7 +152,10 @@
   }
   function paintMap() {
     if (!state.map) return;
-    for (const {marker, address} of state.markers) marker.setIcon(iconFor(address));
+    for (const {marker, address} of state.markers) {
+      marker.setIcon(iconFor(address));
+      if (marker.isPopupOpen()) marker.setPopupContent(() => popupHtml(address));
+    }
     const colors = {on: getComputedStyle(document.documentElement).getPropertyValue('--on').trim() || '#5fae7f', off: '#d0603f', unknown: '#9aa59f'};
     for (const list of state.polygonsByGroup.values()) for (const {layer, group} of list) {
       const s = groupState(group);
@@ -181,7 +195,7 @@
     list.hidden = !results.length;
     $('search').setAttribute('aria-expanded', String(!!results.length));
     list.innerHTML = results.map((r, i) => '<li role="option" id="opt' + i + '" aria-selected="' + (i === cursor) + '" data-i="' + i + '">' +
-      (r.kind === 'group' ? '<span>Підгрупа ' + esc(r.g.label) + '</span><small>' + esc(r.g.active ? stateName[r.g.state] : 'неактивна') + '</small>'
+      (r.kind === 'group' ? '<span>Підгрупа ' + esc(r.g.label) + '</span><small>' + esc(reportName[groupState(r.g.id)]) + '</small>'
         : '<span>' + esc(r.a.title) + (r.a.entrance ? ' (п.' + esc(r.a.entrance) + ')' : '') + '</span><small>' + esc(r.a.groups.map(g => g.toUpperCase()).join(' + ') || 'без підгрупи') + '</small>') + '</li>').join('');
     if (cursor >= 0) $('search').setAttribute('aria-activedescendant', 'opt' + cursor); else $('search').removeAttribute('aria-activedescendant');
   }
@@ -194,39 +208,52 @@
 
   // --- detail -------------------------------------------------------------
   function loadArchive() {
-    if (!state.archivePromise) state.archivePromise = fetch('data/events.json').then(r => { if (!r.ok) throw new Error('Архів подій недоступний'); return r.json(); })
-      .then(data => (state.archive = E.importData(data, 'events.json')));
+    if (!state.archivePromise) {
+      const promise = fetch('data/events.json?v=' + encodeURIComponent(state.summary.observedUntil), {cache: 'no-store', signal: AbortSignal.timeout(20000)})
+        .then(r => { if (!r.ok) throw new Error('Архів подій недоступний'); return r.json(); })
+        .then(data => E.importData(data, 'events.json')).catch(error => {
+          if (state.archivePromise === promise) state.archivePromise = null;
+          throw error;
+        });
+      state.archivePromise = promise;
+    }
     return state.archivePromise;
   }
-  async function openDetail(id) {
+  function detailStatus(g) {
+    const s = groupState(g.id);
+    return reportName[s] + (s !== 'unknown' && g.since ? ' з ' + when(Date.parse(g.since)) : '');
+  }
+  async function openDetail(id, {scroll = true} = {}) {
+    const version = ++state.detailVersion;
     const g = state.groups.get(id);
     const box = $('detail');
     if (!g) { box.hidden = true; return; }
     box.hidden = false;
     box.innerHTML = '<div class="panel-head"><div><div class="eyebrow">ПІДГРУПА</div><h2 id="detailTitle">' + esc(g.label) + '</h2></div><button type="button" class="close" id="closeDetail">Закрити ✕</button></div>' +
       '<div class="stats">' + [
-        ['Зараз', g.active ? stateName[g.state] + ' · ' + duration(now() - Date.parse(g.since)) : 'Невідомо'],
+        ['За каналом', detailStatus(g)],
         ['Світло за 30 днів', pct(g.month.availability)],
         ['Вимкнень за 30 днів', String(g.month.outageCount)],
         ['Найдовше без світла', Math.round(g.month.longestOutageHours * 10) / 10 + ' год']
-      ].map(([k, v]) => '<div class="stat"><span>' + esc(k) + '</span><strong>' + esc(v) + '</strong></div>').join('') + '</div>' +
+      ].map(([k, v], i) => '<div class="stat"><span>' + esc(k) + '</span><strong' + (i === 0 ? ' id="detailState"' : '') + '>' + esc(v) + '</strong></div>').join('') + '</div>' +
+      '<p class="note">Останнє повідомлення підгрупи: ' + esc(g.lastEvent ? fullFmt.format(Date.parse(g.lastEvent)) : '—') + '. Це не вимірювання у кожному будинку.</p>' +
       '<h3>Останні 30 днів за годинами</h3><div id="heat" class="heat" role="grid" aria-label="Календар світла: дні та години"><p class="note">Завантажуємо історію…</p></div><div id="cellInfo" class="cell-info" aria-live="polite"></div>' +
       addressesHtml(id);
     $('closeDetail').onclick = () => { history.pushState('', '', location.pathname + location.search); closeDetail(); };
-    box.scrollIntoView({behavior: 'smooth', block: 'start'});
+    if (scroll) box.scrollIntoView({behavior: 'smooth', block: 'start'});
     highlight(id);
     try {
       const archive = await loadArchive();
-      if (location.hash !== '#sg=' + id) return;
+      if (version !== state.detailVersion || location.hash !== '#sg=' + id) return;
       renderHeat(archive, id);
-    } catch (error) { $('heat').innerHTML = '<p class="note">' + esc(error.message) + '</p>'; }
+    } catch (error) { if (version === state.detailVersion && $('heat')) $('heat').innerHTML = '<p class="note">' + esc(error.message) + '</p>'; }
   }
   function addressesHtml(id) {
     const list = (state.addresses ? state.addresses.addresses : []).filter(a => a.groups.includes(id));
     if (!list.length) return '<p class="note">Для цієї підгрупи у знімку мапи немає адрес.</p>';
     return '<h3 style="margin-top:16px">Адреси (' + list.length + ')</h3><ul class="addr-list">' + list.map(a => '<li><button type="button" data-address="' + esc(a.id) + '">' + esc(a.title) + (a.entrance ? ' (п.' + esc(a.entrance) + ')' : '') + '</button>' + (a.groups.length > 1 ? ' <small>+ ' + esc(a.groups.filter(x => x !== id).map(x => x.toUpperCase()).join(', ')) + '</small>' : '') + '</li>').join('') + '</ul>';
   }
-  function closeDetail() { $('detail').hidden = true; $('detail').innerHTML = ''; highlight(null); }
+  function closeDetail() { state.detailVersion++; $('detail').hidden = true; $('detail').innerHTML = ''; highlight(null); }
   function renderHeat(archive, id) {
     const end = now(), start = E.parseTime(E.addDays(E.dateKey(end - 1), -29));
     const group = E.analyze(archive, {start, end}).groups.find(g => g.id === id);
@@ -270,28 +297,74 @@
       e.preventDefault(); heat.querySelector('[data-cell="' + Math.max(0, Math.min(cells.length - 1, +b.dataset.cell + d)) + '"]')?.focus();
     };
   }
-  function route() {
+  function route(options) {
     const match = location.hash.match(/^#sg=([\w-]+)$/);
-    if (match) openDetail(match[1]); else if (!$('detail').hidden) closeDetail();
+    if (match) openDetail(match[1], options); else if (!$('detail').hidden) closeDetail();
   }
 
   // --- data ---------------------------------------------------------------
   async function loadSummary() {
-    const response = await fetch('data/summary.json', {cache: 'no-cache'});
+    const response = await fetch('data/summary.json?v=' + Date.now(), {cache: 'no-store', signal: AbortSignal.timeout(20000)});
     if (!response.ok) throw new Error('Не вдалося завантажити дані (' + response.status + ')');
-    state.summary = await response.json();
+    const summary = await response.json();
+    if (!Array.isArray(summary.groups) || live.freshness(summary.observedUntil).checkedAt === null) throw new Error('Некоректний час перевірки даних');
+    // A stale edge cache must not roll an already loaded snapshot backwards.
+    if (state.summary && Date.parse(summary.observedUntil) < now()) return false;
+    const changed = !state.summary || summary.generatedAt !== state.summary.generatedAt || summary.observedUntil !== state.summary.observedUntil;
+    if (!changed) return false;
+    state.summary = summary;
     state.groups = new Map(state.summary.groups.map(g => [g.id, g]));
+    state.archivePromise = null;
+    return true;
   }
-  function renderAll() { renderStatus(); renderRows(); paintMap(); }
+  function renderAll() {
+    renderStatus(); renderRows(); paintMap();
+    state.lastStale = freshness().stale;
+    const g = state.groups.get(location.hash.slice(4));
+    if ($('detailState') && g) $('detailState').textContent = detailStatus(g);
+    results = results.map(r => r.kind === 'group' ? {...r, g: state.groups.get(r.g.id)} : r).filter(r => r.kind !== 'group' || r.g);
+    renderResults();
+    highlight(state.hovered || (location.hash.startsWith('#sg=') ? location.hash.slice(4) : null));
+  }
+  function checkFreshness() {
+    if (!state.summary) return;
+    if (state.lastStale !== freshness().stale) renderAll(); else renderStatus();
+  }
+  let refreshing = null;
+  function refresh() {
+    if (refreshing) return refreshing;
+    $('refresh').disabled = true;
+    $('refresh').textContent = 'Оновлюємо…';
+    // Expire old states immediately, even while offline or waiting for the request.
+    checkFreshness();
+    refreshing = (async () => {
+      try {
+        if (!state.initialized) { await start(); return; }
+        const changed = await loadSummary();
+        state.refreshError = null;
+        renderAll();
+        if ((changed || !state.archivePromise) && !$('detail').hidden) route({scroll: false});
+      } catch (error) {
+        state.refreshError = error;
+        if (state.summary) checkFreshness(); else notice(error.message);
+      } finally {
+        $('refresh').disabled = false;
+        $('refresh').textContent = 'Оновити дані';
+        refreshing = null;
+      }
+    })();
+    return refreshing;
+  }
   async function start() {
     try {
-      const [, addresses] = await Promise.all([loadSummary(), fetch('data/addresses.json').then(r => r.ok ? r.json() : null).catch(() => null)]);
+      const [, addresses] = await Promise.all([loadSummary(), fetch('data/addresses.json', {signal: AbortSignal.timeout(20000)}).then(r => r.ok ? r.json() : null).catch(() => null)]);
       state.addresses = addresses || {source: null, polygons: [], addresses: [], colors: {}};
-      if (!addresses) notice('Адреси недоступні: показано лише підгрупи.');
+      state.refreshError = null;
       initMap();
+      state.initialized = true;
       renderAll();
       route();
-    } catch (error) { notice(error.message); $('statusText').textContent = 'Дані недоступні'; }
+    } catch (error) { notice(error.message); $('statusText').textContent = 'Дані недоступні'; $('status').classList.add('is-stale'); }
   }
 
   // --- events -------------------------------------------------------------
@@ -321,7 +394,11 @@
   $('searchResults').addEventListener('mousedown', e => { const li = e.target.closest('[data-i]'); if (li) { e.preventDefault(); choose(results[+li.dataset.i]); } });
   $('search').addEventListener('blur', () => setTimeout(() => { results = []; renderResults(); }, 150));
   window.addEventListener('hashchange', route);
-  // The data is rebuilt hourly; refresh an open page quietly.
-  setInterval(() => { if (document.visibilityState === 'visible') loadSummary().then(renderAll).catch(() => {}); }, 15 * 60 * 1000);
-  start();
+  $('refresh').onclick = refresh;
+  // Re-read the published snapshot each minute, and immediately after returning to the tab.
+  setInterval(() => { if (document.visibilityState === 'visible') refresh(); }, live.REFRESH_INTERVAL);
+  setInterval(() => { if (document.visibilityState === 'visible') checkFreshness(); }, 15000);
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') refresh(); });
+  window.addEventListener('online', refresh);
+  refresh();
 })();

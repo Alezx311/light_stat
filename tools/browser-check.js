@@ -43,15 +43,33 @@ async function main(){
   const eventsPath=path.join(root,'data','events.json');
   const expectedPoints=engine.importData(JSON.parse(await fs.readFile(eventsPath,'utf8'))).points.length;
   const addresses=JSON.parse(await fs.readFile(path.join(root,'data','addresses.json'),'utf8')).addresses;
+  const snapshot=JSON.parse(await fs.readFile(path.join(site,'data','summary.json'),'utf8'));
   try{
     await send('Page.enable');await send('Runtime.enable');
+    const clockScript=await send('Page.addScriptToEvaluateOnNewDocument',{source:`
+      window.__wall=${Date.parse(snapshot.observedUntil) + 60000};
+      Date.now=()=>window.__wall;
+      const intervals=new Map();
+      window.setInterval=(fn,ms)=>{intervals.set(ms,fn);return ms;};
+      window.__tick=ms=>intervals.get(ms)?.();
+      const nativeFetch=window.fetch.bind(window);
+      window.__requests=[];
+      window.fetch=(url,options)=>{
+        window.__requests.push(String(url));
+        if(String(url).startsWith('data/summary.json')){
+          if(window.__failSummary)return Promise.reject(new Error('QA offline'));
+          if(window.__summary)return Promise.resolve(new Response(JSON.stringify(window.__summary)));
+        }
+        return nativeFetch(url,options);
+      };
+    `});
     await send('Emulation.setDeviceMetricsOverride',{width:1440,height:1120,deviceScaleFactor:1,mobile:false});
     // Public atlas: map first, every subgroup at once, address search, subgroup detail.
     await send('Page.navigate',{url:serverURL+'/'});
     await ready('document.querySelectorAll("#rows .row").length>0 && document.querySelectorAll(".addr").length>0');
     assert.equal(await evaluate('document.querySelectorAll("#rows .row, #inactiveRows .row").length'),expectedPoints);
     assert.equal(await evaluate('document.querySelectorAll(".addr").length'),addresses.length);
-    assert.ok(await evaluate('document.querySelector("#statusText").textContent.startsWith("Зараз без світла:")'));
+    assert.ok(await evaluate('document.querySelector("#statusText").textContent.startsWith("За каналом:")'));
     assert.equal(await evaluate('document.documentElement.scrollWidth<=innerWidth'),true);
     await wait(1500);await screenshot('site-desktop');
     await evaluate('document.querySelector("[data-range=week]").click()');
@@ -74,6 +92,44 @@ async function main(){
     await send('Input.dispatchKeyEvent',{type:'keyDown',key:'ArrowRight',code:'ArrowRight'});
     assert.equal(await evaluate('document.activeElement.dataset.cell'),'1');
     await screenshot('site-detail');
+    // A live page expires without a deployment or successful network response.
+    const stripBefore=await evaluate('document.querySelector("#rows [data-sg=sg30] .strip").outerHTML');
+    await evaluate('window.__wall+=15*60000;window.__tick(15000)');
+    assert.ok(await evaluate('document.querySelector("#statusText").textContent.includes("Дані застаріли")'));
+    assert.equal(await evaluate('document.querySelectorAll(".addr .s-on,.addr .s-off").length'),0);
+    assert.equal(await evaluate('document.querySelectorAll("#rows .now .s-on,#rows .now .s-off").length'),0);
+    assert.equal(await evaluate('document.querySelector("#detailState").textContent'),'Стан невідомий');
+    assert.ok(await evaluate('document.querySelector(".leaflet-popup .pop").textContent.includes("Стан невідомий")'));
+    assert.equal(await evaluate('document.querySelector("#rows [data-sg=sg30] .strip").outerHTML'),stripBefore);
+    await evaluate('document.querySelector("#search").value="sg30";document.querySelector("#search").dispatchEvent(new Event("input"))');
+    assert.ok(await evaluate('document.querySelector("#searchResults").textContent.includes("Стан невідомий")'));
+    await screenshot('site-stale');
+    await send('Emulation.setDeviceMetricsOverride',{width:390,height:844,deviceScaleFactor:1,mobile:true});
+    await evaluate('document.querySelector("#search").dispatchEvent(new KeyboardEvent("keydown",{key:"Escape"}));scrollTo(0,0)');
+    await wait(400);
+    assert.equal(await evaluate('document.documentElement.scrollWidth<=innerWidth'),true);
+    await screenshot('site-stale-mobile');
+    await send('Emulation.setDeviceMetricsOverride',{width:1440,height:1120,deviceScaleFactor:1,mobile:false});
+    await evaluate('window.__failSummary=true;document.querySelector("#refresh").click()');
+    await ready('!document.querySelector("#refresh").disabled');
+    assert.ok(await evaluate('document.querySelector("#notice").textContent.includes("Не вдалося отримати оновлення")'));
+    // A successful HTTP response with the same old check is still stale.
+    await evaluate('window.__failSummary=false;window.__tick(60000)');
+    await ready('!document.querySelector("#refresh").disabled');
+    assert.equal(await evaluate('document.querySelector("#status").classList.contains("is-stale")'),true);
+    const archiveRequests=await evaluate('window.__requests.filter(u=>u.startsWith("data/events.json")).length');
+    await evaluate(`window.__summary=${JSON.stringify(snapshot)};window.__summary.observedUntil=new Date(window.__wall).toISOString();window.__summary.generatedAt=window.__summary.observedUntil;`);
+    // Returning to the tab refreshes the open detail and invalidates its cached archive.
+    await evaluate('document.dispatchEvent(new Event("visibilitychange"))');
+    await ready('!document.querySelector("#refresh").disabled && document.querySelectorAll("#heat .cell").length>0');
+    assert.equal(await evaluate('document.querySelector("#status").classList.contains("is-stale")'),false);
+    assert.equal(await evaluate('document.querySelector("#notice").hidden'),true);
+    assert.ok(await evaluate('window.__requests.filter(u=>u.startsWith("data/events.json")).length')>archiveRequests);
+    assert.ok(await evaluate('document.querySelectorAll(".addr .s-on,.addr .s-off").length>0'));
+    const recoveredStatus=await evaluate('document.querySelector("#statusText").textContent');
+    await evaluate(`window.__summary=${JSON.stringify(snapshot)};document.querySelector('#refresh').click()`);
+    await ready('!document.querySelector("#refresh").disabled');
+    assert.equal(await evaluate('document.querySelector("#statusText").textContent'),recoveredStatus,'older snapshots cannot roll back freshness');
     await send('Emulation.setDeviceMetricsOverride',{width:390,height:844,deviceScaleFactor:1,mobile:true});
     await evaluate('location.hash="";scrollTo(0,0)');
     await wait(600);
@@ -82,6 +138,7 @@ async function main(){
     await evaluate('document.querySelector("#groups").scrollIntoView()');
     await screenshot('site-mobile-groups');
     await send('Emulation.setDeviceMetricsOverride',{width:1440,height:1120,deviceScaleFactor:1,mobile:false});
+    await send('Page.removeScriptToEvaluateOnNewDocument',{identifier:clockScript.identifier});
     // Advanced analytics with the bundled archive.
     await send('Page.navigate',{url:serverURL+'/explore.html'});
     await ready('document.querySelectorAll(".heat-cell").length>0');
@@ -161,7 +218,7 @@ async function main(){
     await ready('document.querySelector("#notice").classList.contains("error")');
     assert.equal(await evaluate('document.querySelectorAll("#pointSelect option").length'),1);
     assert.equal(errors.length,0,JSON.stringify(errors));
-    console.log('PASS: public atlas (map, all subgroups, search, popup, detail, mobile), archive loading, keyboard details, filters, custom dates, pagination, empty and geolocated coverage, mobile layout, self-contained offline import, XSS escaping, safe CSV, archive export roundtrip, invalid import recovery; no browser exceptions.');
+    console.log('PASS: public atlas (map, search, popup, detail, mobile), freshness expiry while offline, unchanged/older snapshots, minute and tab-return refresh, detail archive invalidation, archive loading, keyboard navigation, filters, custom dates, offline import, XSS escaping, safe CSV, archive export, invalid import recovery; no browser exceptions.');
   }finally{await send('Browser.close').catch(()=>{});ws.close();server.kill();chrome.kill();}
 }
 main().catch(error=>{console.error(error);process.exitCode=1;});

@@ -3,13 +3,14 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f5f6f8">
-<meta name="description" content="Карта світла по підгрупах «Підгрупи 6.2» у Києві: стан зараз, історія за добу й тиждень, адреси.">
+<meta name="description" content="Повідомлення про світло по підгрупах «Підгрупи 6.2» у Києві: свіжість даних, історія за добу й тиждень, адреси.">
 <title>Light Stat — карта світла</title>
 <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css">
 <link rel="stylesheet" href="assets/site.css">
 <script src="assets/vendor/leaflet/leaflet.js" defer></script>
 <script src="lib/electricity.js" defer></script>
+<script src="assets/live-status.js" defer></script>
 <script src="assets/site.js" defer></script>
 </head>
 <body>
@@ -29,10 +30,11 @@
 </header>
 <main>
   <div id="notice" class="notice" role="alert" hidden></div>
+  <div class="source-note"><span>На карті — останній стан <a href="https://t.me/subgroups62" target="_blank" rel="noopener">за повідомленнями каналу</a>, а не перевірка світла у вашому будинку.</span> <button type="button" id="refresh" class="refresh" title="Завантажити останні опубліковані дані">Оновити дані</button></div>
   <section class="map-wrap" aria-label="Карта адрес за станом підгруп">
     <div id="map" class="map"></div>
     <div class="map-legend" aria-hidden="true">
-      <span><i class="dot s-on"></i>Є світло</span><span><i class="dot s-off"></i>Немає</span>
+      <span>За каналом:</span><span><i class="dot s-on"></i>Увімкнено</span><span><i class="dot s-off"></i>Вимкнено</span>
       <span><i class="dot s-unknown"></i>Невідомо</span><span><i class="dot split"><i class="s-on"></i><i class="s-off"></i></i>Два вводи</span>
     </div>
   </section>
@@ -41,7 +43,7 @@
 
   <section id="groups" class="panel" aria-labelledby="groupsTitle">
     <div class="panel-head">
-      <div><div class="eyebrow">СТАН ЗАРАЗ · ІСТОРІЯ</div><h2 id="groupsTitle">Усі підгрупи</h2></div>
+      <div><div class="eyebrow">ПОВІДОМЛЕННЯ КАНАЛУ · ІСТОРІЯ</div><h2 id="groupsTitle">Усі підгрупи</h2></div>
       <div class="controls">
         <div class="segmented" role="group" aria-label="Період смуги">
           <button type="button" data-range="day" aria-pressed="true">24 год</button><button type="button" data-range="week" aria-pressed="false">7 днів</button>
@@ -50,7 +52,7 @@
         <select id="sort"><option value="state">Спершу без світла</option><option value="availability">Найменше світла за 7 днів</option><option value="name">За назвою</option></select>
       </div>
     </div>
-    <div class="rows-head" aria-hidden="true"><span>Підгрупа</span><span>Зараз</span><div class="axis" id="axis"></div><span class="num">Світло, 7 дн</span></div>
+    <div class="rows-head" aria-hidden="true"><span>Підгрупа</span><span>За каналом</span><div class="axis" id="axis"></div><span class="num">Світло, 7 дн</span></div>
     <div id="rows" class="rows"></div>
     <details id="inactiveBox" class="inactive"><summary id="inactiveTitle">Неактивні підгрупи</summary><div id="inactiveRows" class="rows"></div></details>
     <p class="note">Стан — останнє повідомлення каналу про підгрупу. Смуга: <i class="sw s-on"></i> світло є, <i class="sw s-off"></i> немає, <i class="sw s-unknown"></i> невідомо. Наведіть на рядок, щоб підсвітити адреси на карті.</p>
@@ -59,7 +61,7 @@
   <section id="method" class="method" aria-labelledby="methodTitle">
     <h2 id="methodTitle">Звідки дані</h2>
     <div class="cards">
-      <article><h3>Події каналу</h3><p>Стан підгруп — повідомлення «✅ … увімкнено» / «🔴 … вимкнено» з публічного каналу <a href="https://t.me/subgroups62" target="_blank" rel="noopener">«Підгрупи 6.2»</a>. Сайт перечитує канал щогодини. Між перевіркою та новим повідомленням стан вважається незмінним, але не довше 30 днів тиші.</p></article>
+      <article><h3>Події каналу</h3><p>Стан підгруп — повідомлення «✅ … увімкнено» / «🔴 … вимкнено» з публічного каналу <a href="https://t.me/subgroups62" target="_blank" rel="noopener">«Підгрупи 6.2»</a>. Перевірка запланована кожні 5 хвилин, але можливі затримки. Якщо канал не перевірено 15 хвилин, поточний стан стає невідомим; історія зберігається. Підгрупи без повідомлень понад 30 днів також невідомі.</p></article>
       <article><h3>Адреси</h3><p>Прив’язка адрес до підгруп — знімок <a href="https://eh-map.napruha.top/" target="_blank" rel="noopener">мапи відключень</a> того ж каналу від <span id="addressesDate">—</span>. Адреса з двома вводами може мати світло, поки одна з її підгруп вимкнена.</p></article>
       <article><h3>Що це не є</h3><p>Це не вимірювання в кожному будинку і не графік ДТЕК. Сайт не поширює стан на сусідні будинки та не вгадує адреси. Невідоме лишається сірим.</p></article>
       <article><h3>Більше</h3><p><a href="explore.html">Розширена аналітика</a> — календар за весь архів, порівняння, CSV, власні JSON. Код і методика — <a href="https://github.com/Alezx311/light_stat" target="_blank" rel="noopener">GitHub</a>.</p></article>
