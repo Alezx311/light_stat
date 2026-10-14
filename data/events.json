@@ -8,8 +8,8 @@
       "method": "telegram",
       "url": "https://t.me/subgroups62",
       "channel": "subgroups62",
-      "lastMessageId": 20575,
-      "observedUntil": "2026-10-13T22:45:47.909Z"
+      "lastMessageId": 20585,
+      "observedUntil": "2026-10-14T12:13:32.470Z"
     }
   ],
   "points": [
@@ -282,6 +282,11 @@
       "sourceId": "telegram:2229092931",
       "id": "id_88",
       "name": "ID_88"
+    },
+    {
+      "sourceId": "telegram:2229092931",
+      "id": "id_243",
+      "name": "ID_243"
     }
   ],
   "events": [
@@ -16217,6 +16222,13 @@
     {"sourceId":"telegram:2229092931","pointId":"sg40","timestamp":"2026-10-13T20:27:21.000Z","state":"on","id":"20572"},
     {"sourceId":"telegram:2229092931","pointId":"id_52","timestamp":"2026-10-13T20:27:34.000Z","state":"on","id":"20573"},
     {"sourceId":"telegram:2229092931","pointId":"id_232","timestamp":"2026-10-13T20:28:06.000Z","state":"on","id":"20574"},
-    {"sourceId":"telegram:2229092931","pointId":"id_73","timestamp":"2026-10-13T20:28:44.000Z","state":"on","id":"20575"}
+    {"sourceId":"telegram:2229092931","pointId":"id_73","timestamp":"2026-10-13T20:28:44.000Z","state":"on","id":"20575"},
+    {"sourceId":"telegram:2229092931","pointId":"id_243","timestamp":"2026-10-14T09:39:02.000Z","state":"off","id":"20578"},
+    {"sourceId":"telegram:2229092931","pointId":"id_243","timestamp":"2026-10-14T09:40:18.000Z","state":"off","id":"20579"},
+    {"sourceId":"telegram:2229092931","pointId":"id_243","timestamp":"2026-10-14T10:18:26.000Z","state":"on","id":"20580"},
+    {"sourceId":"telegram:2229092931","pointId":"id_243","timestamp":"2026-10-14T10:27:22.000Z","state":"off","id":"20582"},
+    {"sourceId":"telegram:2229092931","pointId":"id_243","timestamp":"2026-10-14T10:32:43.000Z","state":"on","id":"20583"},
+    {"sourceId":"telegram:2229092931","pointId":"id_243","timestamp":"2026-10-14T11:42:53.000Z","state":"off","id":"20584"},
+    {"sourceId":"telegram:2229092931","pointId":"id_243","timestamp":"2026-10-14T11:49:43.000Z","state":"on","id":"20585"}
   ]
 }
