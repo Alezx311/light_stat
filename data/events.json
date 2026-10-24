@@ -8,8 +8,8 @@
       "method": "telegram",
       "url": "https://t.me/subgroups62",
       "channel": "subgroups62",
-      "lastMessageId": 21441,
-      "observedUntil": "2026-10-23T20:23:36.381Z"
+      "lastMessageId": 21448,
+      "observedUntil": "2026-10-24T11:25:45.928Z"
     }
   ],
   "points": [
@@ -17045,6 +17045,11 @@
     {"sourceId":"telegram:2229092931","pointId":"id_2011","timestamp":"2026-10-23T19:12:16.000Z","state":"on","id":"21437"},
     {"sourceId":"telegram:2229092931","pointId":"id_22","timestamp":"2026-10-23T19:12:25.000Z","state":"on","id":"21438"},
     {"sourceId":"telegram:2229092931","pointId":"id_22","timestamp":"2026-10-23T19:42:35.000Z","state":"off","id":"21440"},
-    {"sourceId":"telegram:2229092931","pointId":"id_53","timestamp":"2026-10-23T20:19:46.000Z","state":"on","id":"21441"}
+    {"sourceId":"telegram:2229092931","pointId":"id_53","timestamp":"2026-10-23T20:19:46.000Z","state":"on","id":"21441"},
+    {"sourceId":"telegram:2229092931","pointId":"id_22","timestamp":"2026-10-24T09:17:52.000Z","state":"on","id":"21442"},
+    {"sourceId":"telegram:2229092931","pointId":"id_22","timestamp":"2026-10-24T09:26:39.000Z","state":"off","id":"21443"},
+    {"sourceId":"telegram:2229092931","pointId":"id_2011","timestamp":"2026-10-24T09:52:33.000Z","state":"off","id":"21444"},
+    {"sourceId":"telegram:2229092931","pointId":"id_2011","timestamp":"2026-10-24T10:02:13.000Z","state":"on","id":"21446"},
+    {"sourceId":"telegram:2229092931","pointId":"id_22","timestamp":"2026-10-24T10:24:14.000Z","state":"on","id":"21448"}
   ]
 }
