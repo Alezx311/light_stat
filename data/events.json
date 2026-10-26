@@ -8,8 +8,8 @@
       "method": "telegram",
       "url": "https://t.me/subgroups62",
       "channel": "subgroups62",
-      "lastMessageId": 21604,
-      "observedUntil": "2026-10-26T16:54:01.598Z"
+      "lastMessageId": 21640,
+      "observedUntil": "2026-10-26T21:16:08.388Z"
     }
   ],
   "points": [
@@ -17187,6 +17187,39 @@
     {"sourceId":"telegram:2229092931","pointId":"id_27","timestamp":"2026-10-26T15:12:57.000Z","state":"off","id":"21601"},
     {"sourceId":"telegram:2229092931","pointId":"id_50","timestamp":"2026-10-26T15:17:46.000Z","state":"off","id":"21602"},
     {"sourceId":"telegram:2229092931","pointId":"id_53","timestamp":"2026-10-26T15:17:47.000Z","state":"off","id":"21603"},
-    {"sourceId":"telegram:2229092931","pointId":"id_127","timestamp":"2026-10-26T15:17:48.000Z","state":"off","id":"21604"}
+    {"sourceId":"telegram:2229092931","pointId":"id_127","timestamp":"2026-10-26T15:17:48.000Z","state":"off","id":"21604"},
+    {"sourceId":"telegram:2229092931","pointId":"sg90","timestamp":"2026-10-26T18:01:48.000Z","state":"on","id":"21606"},
+    {"sourceId":"telegram:2229092931","pointId":"id_24","timestamp":"2026-10-26T18:01:54.000Z","state":"on","id":"21607"},
+    {"sourceId":"telegram:2229092931","pointId":"id_71","timestamp":"2026-10-26T18:01:59.000Z","state":"on","id":"21608"},
+    {"sourceId":"telegram:2229092931","pointId":"id_26","timestamp":"2026-10-26T18:02:14.000Z","state":"on","id":"21609"},
+    {"sourceId":"telegram:2229092931","pointId":"id_1617","timestamp":"2026-10-26T18:02:23.000Z","state":"on","id":"21610"},
+    {"sourceId":"telegram:2229092931","pointId":"id_20","timestamp":"2026-10-26T18:03:14.000Z","state":"on","id":"21611"},
+    {"sourceId":"telegram:2229092931","pointId":"id_17","timestamp":"2026-10-26T18:24:40.000Z","state":"on","id":"21612"},
+    {"sourceId":"telegram:2229092931","pointId":"id_53","timestamp":"2026-10-26T18:25:12.000Z","state":"on","id":"21613"},
+    {"sourceId":"telegram:2229092931","pointId":"sg10","timestamp":"2026-10-26T18:25:18.000Z","state":"on","id":"21614"},
+    {"sourceId":"telegram:2229092931","pointId":"id_415","timestamp":"2026-10-26T18:25:29.000Z","state":"on","id":"21615"},
+    {"sourceId":"telegram:2229092931","pointId":"sg11","timestamp":"2026-10-26T18:25:30.000Z","state":"on","id":"21616"},
+    {"sourceId":"telegram:2229092931","pointId":"sg70","timestamp":"2026-10-26T18:25:31.000Z","state":"on","id":"21617"},
+    {"sourceId":"telegram:2229092931","pointId":"id_127","timestamp":"2026-10-26T18:25:31.000Z","state":"on","id":"21618"},
+    {"sourceId":"telegram:2229092931","pointId":"id_214","timestamp":"2026-10-26T18:25:34.000Z","state":"on","id":"21619"},
+    {"sourceId":"telegram:2229092931","pointId":"sg20","timestamp":"2026-10-26T18:25:35.000Z","state":"on","id":"21620"},
+    {"sourceId":"telegram:2229092931","pointId":"sg30","timestamp":"2026-10-26T18:25:35.000Z","state":"on","id":"21621"},
+    {"sourceId":"telegram:2229092931","pointId":"id_27","timestamp":"2026-10-26T18:25:42.000Z","state":"on","id":"21623"},
+    {"sourceId":"telegram:2229092931","pointId":"id_14","timestamp":"2026-10-26T18:25:46.000Z","state":"on","id":"21624"},
+    {"sourceId":"telegram:2229092931","pointId":"sg60","timestamp":"2026-10-26T18:25:49.000Z","state":"on","id":"21625"},
+    {"sourceId":"telegram:2229092931","pointId":"id_2315","timestamp":"2026-10-26T18:25:50.000Z","state":"on","id":"21626"},
+    {"sourceId":"telegram:2229092931","pointId":"id_78","timestamp":"2026-10-26T18:25:53.000Z","state":"on","id":"21627"},
+    {"sourceId":"telegram:2229092931","pointId":"id_59","timestamp":"2026-10-26T18:25:57.000Z","state":"on","id":"21628"},
+    {"sourceId":"telegram:2229092931","pointId":"id_73","timestamp":"2026-10-26T18:25:57.000Z","state":"on","id":"21629"},
+    {"sourceId":"telegram:2229092931","pointId":"id_131","timestamp":"2026-10-26T18:25:57.000Z","state":"on","id":"21630"},
+    {"sourceId":"telegram:2229092931","pointId":"id_33","timestamp":"2026-10-26T18:25:59.000Z","state":"on","id":"21631"},
+    {"sourceId":"telegram:2229092931","pointId":"id_52","timestamp":"2026-10-26T18:26:10.000Z","state":"on","id":"21632"},
+    {"sourceId":"telegram:2229092931","pointId":"sg40","timestamp":"2026-10-26T18:26:14.000Z","state":"on","id":"21633"},
+    {"sourceId":"telegram:2229092931","pointId":"id_50","timestamp":"2026-10-26T18:26:16.000Z","state":"on","id":"21634"},
+    {"sourceId":"telegram:2229092931","pointId":"id_88","timestamp":"2026-10-26T18:26:41.000Z","state":"on","id":"21635"},
+    {"sourceId":"telegram:2229092931","pointId":"id_232","timestamp":"2026-10-26T18:26:53.000Z","state":"on","id":"21636"},
+    {"sourceId":"telegram:2229092931","pointId":"id_242","timestamp":"2026-10-26T18:46:38.000Z","state":"on","id":"21638"},
+    {"sourceId":"telegram:2229092931","pointId":"id_2011","timestamp":"2026-10-26T18:46:43.000Z","state":"on","id":"21639"},
+    {"sourceId":"telegram:2229092931","pointId":"id_22","timestamp":"2026-10-26T18:46:45.000Z","state":"on","id":"21640"}
   ]
 }
