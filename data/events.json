@@ -8,8 +8,8 @@
       "method": "telegram",
       "url": "https://t.me/subgroups62",
       "channel": "subgroups62",
-      "lastMessageId": 22217,
-      "observedUntil": "2026-10-29T23:31:35.565Z"
+      "lastMessageId": 22226,
+      "observedUntil": "2026-10-30T02:51:34.634Z"
     }
   ],
   "points": [
@@ -17783,6 +17783,15 @@
     {"sourceId":"telegram:2229092931","pointId":"id_2011","timestamp":"2026-10-29T23:04:35.000Z","state":"on","id":"22214"},
     {"sourceId":"telegram:2229092931","pointId":"sg80","timestamp":"2026-10-29T23:27:58.000Z","state":"off","id":"22215"},
     {"sourceId":"telegram:2229092931","pointId":"id_13","timestamp":"2026-10-29T23:28:05.000Z","state":"off","id":"22216"},
-    {"sourceId":"telegram:2229092931","pointId":"id_761","timestamp":"2026-10-29T23:28:06.000Z","state":"off","id":"22217"}
+    {"sourceId":"telegram:2229092931","pointId":"id_761","timestamp":"2026-10-29T23:28:06.000Z","state":"off","id":"22217"},
+    {"sourceId":"telegram:2229092931","pointId":"id_13","timestamp":"2026-10-29T23:33:22.000Z","state":"on","id":"22218"},
+    {"sourceId":"telegram:2229092931","pointId":"id_761","timestamp":"2026-10-29T23:33:25.000Z","state":"on","id":"22219"},
+    {"sourceId":"telegram:2229092931","pointId":"sg80","timestamp":"2026-10-29T23:34:21.000Z","state":"on","id":"22220"},
+    {"sourceId":"telegram:2229092931","pointId":"id_22","timestamp":"2026-10-30T01:09:44.000Z","state":"off","id":"22221"},
+    {"sourceId":"telegram:2229092931","pointId":"id_2011","timestamp":"2026-10-30T01:09:44.000Z","state":"off","id":"22222"},
+    {"sourceId":"telegram:2229092931","pointId":"id_242","timestamp":"2026-10-30T01:09:44.000Z","state":"off","id":"22223"},
+    {"sourceId":"telegram:2229092931","pointId":"id_242","timestamp":"2026-10-30T02:13:58.000Z","state":"on","id":"22224"},
+    {"sourceId":"telegram:2229092931","pointId":"id_22","timestamp":"2026-10-30T02:14:03.000Z","state":"on","id":"22225"},
+    {"sourceId":"telegram:2229092931","pointId":"id_2011","timestamp":"2026-10-30T02:14:13.000Z","state":"on","id":"22226"}
   ]
 }
