@@ -8,8 +8,8 @@
       "method": "telegram",
       "url": "https://t.me/subgroups62",
       "channel": "subgroups62",
-      "lastMessageId": 24776,
-      "observedUntil": "2026-11-13T01:23:05.653Z"
+      "lastMessageId": 24786,
+      "observedUntil": "2026-11-13T08:14:05.603Z"
     }
   ],
   "points": [
@@ -20166,6 +20166,15 @@
     {"sourceId":"telegram:2229092931","pointId":"id_418","timestamp":"2026-11-12T20:55:30.000Z","state":"on","id":"24773"},
     {"sourceId":"telegram:2229092931","pointId":"id_1722","timestamp":"2026-11-12T20:55:30.000Z","state":"on","id":"24774"},
     {"sourceId":"telegram:2229092931","pointId":"id_33","timestamp":"2026-11-12T20:55:35.000Z","state":"on","id":"24775"},
-    {"sourceId":"telegram:2229092931","pointId":"sg40","timestamp":"2026-11-12T20:55:37.000Z","state":"on","id":"24776"}
+    {"sourceId":"telegram:2229092931","pointId":"sg40","timestamp":"2026-11-12T20:55:37.000Z","state":"on","id":"24776"},
+    {"sourceId":"telegram:2229092931","pointId":"id_50","timestamp":"2026-11-13T07:31:05.000Z","state":"off","id":"24778"},
+    {"sourceId":"telegram:2229092931","pointId":"id_54","timestamp":"2026-11-13T07:31:06.000Z","state":"off","id":"24779"},
+    {"sourceId":"telegram:2229092931","pointId":"id_127","timestamp":"2026-11-13T07:31:07.000Z","state":"off","id":"24780"},
+    {"sourceId":"telegram:2229092931","pointId":"sg30","timestamp":"2026-11-13T07:31:22.000Z","state":"off","id":"24781"},
+    {"sourceId":"telegram:2229092931","pointId":"sg60","timestamp":"2026-11-13T07:31:23.000Z","state":"off","id":"24782"},
+    {"sourceId":"telegram:2229092931","pointId":"sg70","timestamp":"2026-11-13T07:31:24.000Z","state":"off","id":"24783"},
+    {"sourceId":"telegram:2229092931","pointId":"id_52","timestamp":"2026-11-13T07:31:40.000Z","state":"off","id":"24784"},
+    {"sourceId":"telegram:2229092931","pointId":"id_73","timestamp":"2026-11-13T07:31:40.000Z","state":"off","id":"24785"},
+    {"sourceId":"telegram:2229092931","pointId":"id_78","timestamp":"2026-11-13T07:31:41.000Z","state":"off","id":"24786"}
   ]
 }
